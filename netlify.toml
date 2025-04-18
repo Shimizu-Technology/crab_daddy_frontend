@@ -1,0 +1,20 @@
+# Netlify configuration file for Crab Daddy
+
+# Build settings
+[build]
+  # Directory to publish (relative to root of your repo)
+  publish = "dist"
+  # Default build command
+  command = "npm run build"
+
+# Image CDN configuration
+[images]
+  # Allow Netlify to fetch images from AWS S3 bucket
+  remote_images = [
+    "https://crabdaddy.s3.ap-southeast-2.amazonaws.com/.*",
+    "https://order-suite-assets.s3.ap-southeast-2.amazonaws.com/.*"
+  ]
+  
+  # Default image optimization settings
+  quality = 85
+  format = "auto"  # Will serve WebP or AVIF when supported by the browser
