@@ -14,6 +14,7 @@ import { LoadingSpinner } from '../shared/components/ui';
 import { LoginForm, SignUpForm, ForgotPasswordForm, ResetPasswordForm, VerifyPhonePage } from '../shared/components/auth';
 import { OrderHistory } from './components/profile/OrderHistory';
 import { ProfilePage } from '../shared/components/profile';
+import FeaturedSection from './components/FeaturedSection';
 
 import { useMenuStore } from './store/menuStore';
 import { useCategoryStore } from './store/categoryStore';
@@ -274,6 +275,7 @@ export default function OnlineOrderingApp() {
           element={
             <>
               <Hero />
+              <FeaturedSection />
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 {featuredItemsLoading ? (
                   // Show loading spinner while featured items are loading
@@ -281,106 +283,66 @@ export default function OnlineOrderingApp() {
                     <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#E87230]"></div>
                   </div>
                 ) : featuredItems.length > 0 ? (
-                  // Show Popular Items with an improved layout
-                  <div className="animate-fadeIn">
-                    <div className="flex items-center justify-between mb-8">
-                      <div className="relative">
-                        <h2 className="text-2xl sm:text-3xl font-display text-gray-900 relative z-10">
+                  <div className="bg-gray-50 py-10 sm:py-16">
+                    <div className="animate-fadeIn max-w-7xl mx-auto">
+                      <div className="text-center mb-8">
+                        <h2 className="text-3xl font-semibold text-[#E87230] mb-3 font-serif">
                           Popular Items
                         </h2>
-                        <div className="absolute bottom-0 left-0 h-3 w-48 bg-[#E87230] opacity-20 rounded-full"></div>
+                        <p className="text-gray-600 max-w-2xl mx-auto">
+                          Our customers' favorite seafood boils and specialty dishes
+                        </p>
                       </div>
-                      <Link 
-                        to="/menu" 
-                        className="text-sm font-medium text-[#E87230] hover:text-[#C55A1E] transition-colors flex items-center"
-                      >
-                        View All
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                        </svg>
-                      </Link>
-                    </div>
-                    
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                      {featuredItems.map((item) => (
-                        <div key={item.id} className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-gray-100 hover:border-gray-200">
-                          <MenuItemCard item={item} />
+                      
+                      <div className="flex justify-between items-center mb-6">
+                        <div className="h-0.5 flex-grow bg-gray-200 rounded-full mr-4"></div>
+                        <Link 
+                          to="/menu" 
+                          className="flex items-center px-4 py-2 text-sm font-medium text-white bg-[#0870B0] hover:bg-[#4A9ED6] rounded-md transition-colors duration-200 shadow-sm"
+                        >
+                          View All
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                            <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                          </svg>
+                        </Link>
+                        <div className="h-0.5 flex-grow bg-gray-200 rounded-full ml-4"></div>
+                      </div>
+                      
+                      {/* Optimized layout based on number of featured items */}
+                      {featuredItems.length === 1 ? (
+                        <div className="max-w-md mx-auto px-4 sm:px-6 lg:px-8">
+                          <div key={featuredItems[0].id} className="bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden border border-gray-100 hover:border-gray-200 transform hover:-translate-y-1">
+                            <MenuItemCard item={featuredItems[0]} index={0} />
+                          </div>
                         </div>
-                      ))}
+                      ) : featuredItems.length === 2 ? (
+                        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                            {featuredItems.map((item, index) => (
+                              <div key={item.id} className="bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden border border-gray-100 hover:border-gray-200 transform hover:-translate-y-1">
+                                <MenuItemCard item={item} index={index} />
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      ) : (
+                        <div className="px-4 sm:px-6 lg:px-8">
+                          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {featuredItems.map((item, index) => (
+                              <div key={item.id} className="bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden border border-gray-100 hover:border-gray-200 transform hover:-translate-y-1">
+                                <MenuItemCard item={item} index={index} />
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </div>
                 ) : (
-                  // Enhanced empty state with visual elements and better layout
-                  <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto animate-fadeIn">
-                    <div className="relative">
-                      <div className="flex items-center justify-between mb-8">
-                        <div className="relative">
-                          <h2 className="text-2xl sm:text-3xl font-display text-gray-900 relative z-10">
-                            Fresh Seafood Boils
-                          </h2>
-                          <div className="absolute bottom-0 left-0 h-3 w-48 bg-[#E87230] opacity-20 rounded-full"></div>
-                        </div>
-                      </div>
-                      
-                      <div className="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
-                        <div className="flex flex-col md:flex-row items-center">
-                          <div className="md:w-1/2 p-8 md:p-10 flex flex-col justify-center">
-                            <div className="bg-[#E87230] bg-opacity-10 rounded-full p-4 w-16 h-16 mb-6 flex items-center justify-center">
-                              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-[#E87230]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                              </svg>
-                            </div>
-                            <h3 className="text-xl font-semibold text-gray-900 mb-3">Explore Our Seafood Boils</h3>
-                            <p className="text-gray-600 mb-6">
-                              Discover our fresh seafood boils with signature Cajun, Garlic, and Lemon Pepper sauces. Experience the best seafood in Guam with our coastal flavors.
-                            </p>
-                            <div className="mt-2">
-                              <Link
-                                to="/menu"
-                                className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#E87230] hover:bg-[#C55A1E] transition-all duration-200 shadow-sm hover:shadow-md transform hover:-translate-y-0.5"
-                              >
-                                View Full Menu
-                              </Link>
-                            </div>
-                          </div>
-                          <div className="md:w-1/2 bg-gray-50 p-6 md:p-0 flex items-center justify-center">
-                            <div className="grid grid-cols-2 gap-3 p-6">
-                              <div className="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
-                                <div className="w-8 h-8 bg-[#E87230] bg-opacity-20 rounded-full flex items-center justify-center mb-2">
-                                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-[#E87230]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-                                  </svg>
-                                </div>
-                                <span className="text-sm font-medium text-gray-700">Seafood Boils</span>
-                              </div>
-                              <div className="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
-                                <div className="w-8 h-8 bg-[#E87230] bg-opacity-20 rounded-full flex items-center justify-center mb-2">
-                                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-[#E87230]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                  </svg>
-                                </div>
-                                <span className="text-sm font-medium text-gray-700">Quick Order</span>
-                              </div>
-                              <div className="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
-                                <div className="w-8 h-8 bg-[#E87230] bg-opacity-20 rounded-full flex items-center justify-center mb-2">
-                                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-[#E87230]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                                  </svg>
-                                </div>
-                                <span className="text-sm font-medium text-gray-700">Easy Checkout</span>
-                              </div>
-                              <div className="bg-white rounded-lg shadow-sm p-4 border border-gray-100">
-                                <div className="w-8 h-8 bg-[#E87230] bg-opacity-20 rounded-full flex items-center justify-center mb-2">
-                                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-[#E87230]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                                  </svg>
-                                </div>
-                                <span className="text-sm font-medium text-gray-700">Special Items</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                  // Simple empty state - no need for duplicate menu discovery section
+                  <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto animate-fadeIn text-center">
+                    <div className="flex justify-center items-center py-8">
+                      {/* We don't show any content here since the FeaturedSection already provides menu discovery */}
                     </div>
                   </div>
                 )}
