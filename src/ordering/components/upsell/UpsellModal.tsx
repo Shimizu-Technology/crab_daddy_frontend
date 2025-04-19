@@ -54,7 +54,7 @@ export function UpsellModal({ item, onClose, onAddToCart }: UpsellModalProps) {
           <div className="mt-5 sm:mt-6 space-y-2">
             <button
               type="button"
-              className="inline-flex w-full justify-center rounded-md bg-[#c1902f] px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#d4a43f]"
+              className="inline-flex w-full justify-center rounded-md bg-[#E87230] px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#C55A1E]"
               onClick={handleAdd}
             >
               Add to Order

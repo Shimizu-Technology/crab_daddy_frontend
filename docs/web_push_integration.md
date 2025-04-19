@@ -1,6 +1,6 @@
 # Web Push Notifications Integration Guide
 
-This document provides guidance on how to use web push notifications in the Hafaloha application.
+This document provides guidance on how to use web push notifications in the Crab Daddy application.
 
 ## Overview
 
@@ -55,7 +55,7 @@ Chrome on Android supports web push notifications, but there are some considerat
 
 ### For Users
 
-1. Visit the Hafaloha website in a supported browser
+1. Visit the Crab Daddy website in a supported browser
 2. For iOS: Use Safari and add the site to your home screen
 3. Click "Subscribe this device" to enable push notifications
 4. Allow notifications when prompted

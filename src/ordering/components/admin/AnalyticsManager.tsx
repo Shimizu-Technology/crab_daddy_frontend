@@ -715,8 +715,8 @@ export function AnalyticsManager({ restaurantId }: AnalyticsManagerProps) {
     // Write file
     // Include time in filename if time filter is enabled
     const filename = useTimeFilter
-      ? `Hafaloha_Reports_${startDate}T${startTime}_to_${endDate}T${endTime}.xlsx`
-      : `Hafaloha_Reports_${startDate}_to_${endDate}.xlsx`;
+      ? `CrabDaddy_Reports_${startDate}T${startTime}_to_${endDate}T${endTime}.xlsx`
+      : `CrabDaddy_Reports_${startDate}_to_${endDate}.xlsx`;
     
     XLSX.writeFile(wb, filename);
   }
@@ -976,7 +976,7 @@ export function AnalyticsManager({ restaurantId }: AnalyticsManagerProps) {
           {/* "Load Analytics" button */}
           <button
             onClick={loadAnalytics}
-            className="px-4 py-2 bg-[#c1902f] text-white rounded hover:bg-[#b2872c]"
+            className="px-4 py-2 bg-[#E87230] text-white rounded hover:bg-[#C55A1E]"
           >
             Load Analytics
           </button>
@@ -1384,7 +1384,7 @@ export function AnalyticsManager({ restaurantId }: AnalyticsManagerProps) {
                           
                           // Generate background color
                           const bgColor = value > 0 
-                            ? `rgba(193, 144, 47, ${Math.max(0.15, intensity)})`
+                            ? `rgba(232, 114, 48, ${Math.max(0.15, intensity)})`
                             : '';
                           
                           // Format for tooltip
@@ -1415,11 +1415,11 @@ export function AnalyticsManager({ restaurantId }: AnalyticsManagerProps) {
             <div className="mt-4 flex items-center justify-end">
               <div className="text-sm text-gray-700 mr-3">Activity Level:</div>
               <div className="flex rounded-md overflow-hidden">
-                <div className="w-8 h-6" style={{ backgroundColor: 'rgba(193, 144, 47, 0.15)' }}></div>
-                <div className="w-8 h-6" style={{ backgroundColor: 'rgba(193, 144, 47, 0.3)' }}></div>
-                <div className="w-8 h-6" style={{ backgroundColor: 'rgba(193, 144, 47, 0.5)' }}></div>
-                <div className="w-8 h-6" style={{ backgroundColor: 'rgba(193, 144, 47, 0.7)' }}></div>
-                <div className="w-8 h-6" style={{ backgroundColor: 'rgba(193, 144, 47, 0.9)' }}></div>
+                <div className="w-8 h-6" style={{ backgroundColor: 'rgba(232, 114, 48, 0.15)' }}></div>
+                <div className="w-8 h-6" style={{ backgroundColor: 'rgba(232, 114, 48, 0.3)' }}></div>
+                <div className="w-8 h-6" style={{ backgroundColor: 'rgba(232, 114, 48, 0.5)' }}></div>
+                <div className="w-8 h-6" style={{ backgroundColor: 'rgba(232, 114, 48, 0.7)' }}></div>
+                <div className="w-8 h-6" style={{ backgroundColor: 'rgba(232, 114, 48, 0.9)' }}></div>
               </div>
               <div className="flex text-sm text-gray-700 ml-2">
                 <span>Low</span>

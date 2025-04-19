@@ -140,7 +140,7 @@ export function CategoriesSettings({ restaurantId }: CategoriesSettingsProps) {
           <div className="flex justify-end">
             <button
               type="submit"
-              className="px-4 py-2 bg-[#c1902f] text-white rounded hover:bg-[#d4a43f]"
+              className="px-4 py-2 bg-[#E87230] text-white rounded hover:bg-[#C55A1E]"
             >
               Add Category
             </button>
@@ -151,7 +151,7 @@ export function CategoriesSettings({ restaurantId }: CategoriesSettingsProps) {
       {/* Loading state */}
       {loading && (
         <div className="text-center py-4">
-          <div className="inline-block animate-spin rounded-full h-6 w-6 border-t-2 border-[#c1902f] border-r-2 border-b-2 border-gray-200"></div>
+          <div className="inline-block animate-spin rounded-full h-6 w-6 border-t-2 border-[#E87230] border-r-2 border-b-2 border-gray-200"></div>
           <p className="mt-2 text-sm text-gray-500">Loading categories...</p>
         </div>
       )}

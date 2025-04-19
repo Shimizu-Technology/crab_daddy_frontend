@@ -119,12 +119,12 @@ axiosInstance.interceptors.request.use((config: InternalAxiosRequestConfig) => {
     }
   } else if (config.url && needsRestaurantContext(config.url)) {
     // For unauthenticated requests to endpoints that need restaurant context
-    // Always use Hafaloha ID (1) for this frontend
-    const hafalohaRestaurantId = import.meta.env.VITE_RESTAURANT_ID || '1';
+    // Always use Crab Daddy ID (4) for this frontend
+    const crabDaddyRestaurantId = import.meta.env.VITE_RESTAURANT_ID || '4';
     
     config.params = config.params || {};
     if (!config.params.restaurant_id) {
-      config.params.restaurant_id = hafalohaRestaurantId;
+      config.params.restaurant_id = crabDaddyRestaurantId;
     }
   }
   

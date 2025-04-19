@@ -59,7 +59,7 @@ export default function SeatingTab() {
   return (
     <div className="bg-white shadow rounded-md">
       {/* Subtle pink top bar with a heading */}
-      <div className="border-b border-gray-200 bg-hafaloha-pink/5 rounded-t-md px-4 py-3">
+      <div className="border-b border-gray-200 bg-[#E87230]/5 rounded-t-md px-4 py-3">
       </div>
 
       <div className="p-4">

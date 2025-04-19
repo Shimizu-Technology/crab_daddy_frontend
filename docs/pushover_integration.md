@@ -1,10 +1,10 @@
 # Pushover Integration
 
-This document describes the integration of Pushover notifications into the Hafaloha frontend application.
+This document describes the integration of Pushover notifications into the Crab Daddy frontend application.
 
 ## Overview
 
-Pushover is a service that makes it easy to get real-time notifications on your Android, iPhone, iPad, and Desktop devices. The Hafaloha application integrates with Pushover to send notifications to restaurant staff when new orders are placed, ensuring they're immediately aware of incoming orders even when not actively monitoring the admin dashboard.
+Pushover is a service that makes it easy to get real-time notifications on your Android, iPhone, iPad, and Desktop devices. The Crab Daddy application integrates with Pushover to send notifications to restaurant staff when new orders are placed, ensuring they're immediately aware of incoming orders even when not actively monitoring the admin dashboard.
 
 ## Features
 
@@ -78,7 +78,7 @@ The frontend communicates with the backend through these API endpoints:
    - Log in to your Pushover dashboard
    - Copy your User Key (30-character string)
 
-3. **Configure in Hafaloha**:
+3. **Configure in Crab Daddy**:
    - Go to Admin Dashboard > Settings > Notifications
    - Enable Pushover notifications
    - Paste your User Key

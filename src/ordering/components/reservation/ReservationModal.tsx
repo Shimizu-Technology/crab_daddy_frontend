@@ -162,7 +162,7 @@ Party Size: ${confirmation.partySize} people`;
             <div className="mt-6 space-y-6 text-left max-w-md mx-auto">
               <div>
                 <h4 className="font-medium flex items-center gap-2">
-                  <Calendar className="h-4 w-4 text-[#c1902f]" />
+                  <Calendar className="h-4 w-4 text-[#E87230]" />
                   Date &amp; Time
                 </h4>
                 <p className="mt-1 text-gray-600">
@@ -172,7 +172,7 @@ Party Size: ${confirmation.partySize} people`;
               </div>
               <div>
                 <h4 className="font-medium flex items-center gap-2">
-                  <Users className="h-4 w-4 text-[#c1902f]" />
+                  <Users className="h-4 w-4 text-[#E87230]" />
                   Party Size
                 </h4>
                 <p className="mt-1 text-gray-600">
@@ -182,7 +182,7 @@ Party Size: ${confirmation.partySize} people`;
               {(confirmation.phone || confirmation.email) && (
                 <div>
                   <h4 className="font-medium flex items-center gap-2">
-                    <Mail className="h-4 w-4 text-[#c1902f]" />
+                    <Mail className="h-4 w-4 text-[#E87230]" />
                     Contact Info
                   </h4>
                   {confirmation.phone && (
@@ -195,7 +195,7 @@ Party Size: ${confirmation.partySize} people`;
               )}
               <div>
                 <h4 className="font-medium flex items-center gap-2">
-                  <MapPin className="h-4 w-4 text-[#c1902f]" />
+                  <MapPin className="h-4 w-4 text-[#E87230]" />
                   Location
                 </h4>
                 <p className="mt-1 text-gray-600">
@@ -209,7 +209,7 @@ Party Size: ${confirmation.partySize} people`;
             <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <button
                 onClick={onClose}
-                className="flex-1 sm:flex-none rounded-md bg-[#c1902f] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#d4a43f]"
+                className="flex-1 sm:flex-none rounded-md bg-[#E87230] px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-[#C55A1E]"
               >
                 Done
               </button>
@@ -260,7 +260,7 @@ Party Size: ${confirmation.partySize} people`;
                   }
                   min={new Date().toISOString().split('T')[0]}
                   className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2
-                             focus:border-[#c1902f] focus:outline-none focus:ring-1 focus:ring-[#c1902f]"
+                             focus:border-[#E87230] focus:outline-none focus:ring-1 focus:ring-[#E87230]"
                 />
               </div>
               <div>
@@ -274,7 +274,7 @@ Party Size: ${confirmation.partySize} people`;
                     }))
                   }
                   className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2
-                             focus:border-[#c1902f] focus:outline-none focus:ring-1 focus:ring-[#c1902f]"
+                             focus:border-[#E87230] focus:outline-none focus:ring-1 focus:ring-[#E87230]"
                 >
                   {Array.from({ length: 10 }, (_, i) => i + 1).map((size) => (
                     <option key={size} value={size}>
@@ -296,7 +296,7 @@ Party Size: ${confirmation.partySize} people`;
                     setFormData((prev) => ({ ...prev, time: e.target.value }))
                   }
                   className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2
-                             focus:border-[#c1902f] focus:outline-none focus:ring-1 focus:ring-[#c1902f]"
+                             focus:border-[#E87230] focus:outline-none focus:ring-1 focus:ring-[#E87230]"
                 >
                   <option value="">Select a time</option>
                   {timeSlots.map((slot) => (
@@ -314,7 +314,7 @@ Party Size: ${confirmation.partySize} people`;
                     setFormData((prev) => ({ ...prev, duration: e.target.value }))
                   }
                   className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2
-                             focus:border-[#c1902f] focus:outline-none focus:ring-1 focus:ring-[#c1902f]"
+                             focus:border-[#E87230] focus:outline-none focus:ring-1 focus:ring-[#E87230]"
                 >
                   <option value="1 hour">1 hour</option>
                   <option value="1.5 hours">1.5 hours</option>
@@ -334,7 +334,7 @@ Party Size: ${confirmation.partySize} people`;
                     setFormData((prev) => ({ ...prev, firstName: e.target.value }))
                   }
                   className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2
-                             focus:border-[#c1902f] focus:outline-none focus:ring-1 focus:ring-[#c1902f]"
+                             focus:border-[#E87230] focus:outline-none focus:ring-1 focus:ring-[#E87230]"
                 />
               </div>
               <div>
@@ -346,7 +346,7 @@ Party Size: ${confirmation.partySize} people`;
                     setFormData((prev) => ({ ...prev, lastName: e.target.value }))
                   }
                   className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2
-                             focus:border-[#c1902f] focus:outline-none focus:ring-1 focus:ring-[#c1902f]"
+                             focus:border-[#E87230] focus:outline-none focus:ring-1 focus:ring-[#E87230]"
                 />
               </div>
             </div>
@@ -363,7 +363,7 @@ Party Size: ${confirmation.partySize} people`;
                   }
                   placeholder="+1671"
                   className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2
-                             focus:border-[#c1902f] focus:outline-none focus:ring-1 focus:ring-[#c1902f]"
+                             focus:border-[#E87230] focus:outline-none focus:ring-1 focus:ring-[#E87230]"
                 />
               </div>
               <div>
@@ -375,7 +375,7 @@ Party Size: ${confirmation.partySize} people`;
                     setFormData((prev) => ({ ...prev, email: e.target.value }))
                   }
                   className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2
-                             focus:border-[#c1902f] focus:outline-none focus:ring-1 focus:ring-[#c1902f]"
+                             focus:border-[#E87230] focus:outline-none focus:ring-1 focus:ring-[#E87230]"
                 />
               </div>
             </div>
@@ -383,9 +383,9 @@ Party Size: ${confirmation.partySize} people`;
             <div className="pt-4">
               <button
                 type="submit"
-                className="w-full rounded-md bg-[#c1902f] px-3 py-2
+                className="w-full rounded-md bg-[#E87230] px-3 py-2
                            text-sm font-semibold text-white shadow-sm
-                           hover:bg-[#d4a43f]"
+                           hover:bg-[#C55A1E]"
               >
                 Reserve Now
               </button>

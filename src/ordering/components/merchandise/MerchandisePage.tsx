@@ -1,14 +1,13 @@
 // src/ordering/components/merchandise/MerchandisePage.tsx
-import React, { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useMerchandiseStore } from '../../store/merchandiseStore';
 import { MerchandiseItem } from './MerchandiseItem';
-import { Filter, SlidersHorizontal, X } from 'lucide-react';
+import { SlidersHorizontal, X } from 'lucide-react';
 
 export function MerchandisePage() {
   const { 
     merchandiseItems, 
     categories, 
-    collections,
     fetchMerchandiseItems, 
     fetchCategories,
     fetchCollections,
@@ -115,7 +114,7 @@ export function MerchandisePage() {
           <SlidersHorizontal className="h-4 w-4" />
           <span>Filters</span>
           {hasActiveFilters && (
-            <span className="ml-1 bg-[#c1902f] text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+            <span className="ml-1 bg-[#E87230] text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
               {(selectedCategory !== null ? 1 : 0) + selectedSizes.size + selectedColors.size}
             </span>
           )}
@@ -130,7 +129,7 @@ export function MerchandisePage() {
               <h2 className="text-lg font-medium text-gray-900">Filters</h2>
               {hasActiveFilters && (
                 <button
-                  className="text-sm text-[#c1902f] hover:text-[#d4a43f]"
+                  className="text-sm text-[#E87230] hover:text-[#C55A1E]"
                   onClick={clearFilters}
                 >
                   Clear all
@@ -153,7 +152,7 @@ export function MerchandisePage() {
                         onChange={() => setSelectedCategory(
                           selectedCategory === category.id ? null : category.id
                         )}
-                        className="h-4 w-4 text-[#c1902f] focus:ring-[#c1902f] border-gray-300"
+                        className="h-4 w-4 text-[#E87230] focus:ring-[#E87230] border-gray-300"
                       />
                       <label
                         htmlFor={`category-${category.id}`}
@@ -177,8 +176,8 @@ export function MerchandisePage() {
                       key={size}
                       className={`px-3 py-1 text-sm border rounded-md
                         ${selectedSizes.has(size)
-                          ? 'border-[#c1902f] bg-[#c1902f]/10 text-[#c1902f]'
-                          : 'border-gray-300 text-gray-700 hover:border-[#c1902f]'
+                          ? 'border-[#E87230] bg-[#E87230]/10 text-[#E87230]'
+                          : 'border-gray-300 text-gray-700 hover:border-[#E87230]'
                         }`}
                       onClick={() => toggleSize(size)}
                     >
@@ -199,8 +198,8 @@ export function MerchandisePage() {
                       key={color}
                       className={`px-3 py-1 text-sm border rounded-md
                         ${selectedColors.has(color)
-                          ? 'border-[#c1902f] bg-[#c1902f]/10 text-[#c1902f]'
-                          : 'border-gray-300 text-gray-700 hover:border-[#c1902f]'
+                          ? 'border-[#E87230] bg-[#E87230]/10 text-[#E87230]'
+                          : 'border-gray-300 text-gray-700 hover:border-[#E87230]'
                         }`}
                       onClick={() => toggleColor(color)}
                     >
@@ -230,7 +229,7 @@ export function MerchandisePage() {
               
               {hasActiveFilters && (
                 <button
-                  className="mb-4 text-sm text-[#c1902f] hover:text-[#d4a43f]"
+                  className="mb-4 text-sm text-[#E87230] hover:text-[#C55A1E]"
                   onClick={clearFilters}
                 >
                   Clear all filters
@@ -252,7 +251,7 @@ export function MerchandisePage() {
                           onChange={() => setSelectedCategory(
                             selectedCategory === category.id ? null : category.id
                           )}
-                          className="h-4 w-4 text-[#c1902f] focus:ring-[#c1902f] border-gray-300"
+                          className="h-4 w-4 text-[#E87230] focus:ring-[#E87230] border-gray-300"
                         />
                         <label
                           htmlFor={`mobile-category-${category.id}`}
@@ -276,8 +275,8 @@ export function MerchandisePage() {
                         key={size}
                         className={`px-3 py-1 text-sm border rounded-md
                           ${selectedSizes.has(size)
-                            ? 'border-[#c1902f] bg-[#c1902f]/10 text-[#c1902f]'
-                            : 'border-gray-300 text-gray-700 hover:border-[#c1902f]'
+                            ? 'border-[#E87230] bg-[#E87230]/10 text-[#E87230]'
+                            : 'border-gray-300 text-gray-700 hover:border-[#E87230]'
                           }`}
                         onClick={() => toggleSize(size)}
                       >
@@ -298,8 +297,8 @@ export function MerchandisePage() {
                         key={color}
                         className={`px-3 py-1 text-sm border rounded-md
                           ${selectedColors.has(color)
-                            ? 'border-[#c1902f] bg-[#c1902f]/10 text-[#c1902f]'
-                            : 'border-gray-300 text-gray-700 hover:border-[#c1902f]'
+                            ? 'border-[#E87230] bg-[#E87230]/10 text-[#E87230]'
+                            : 'border-gray-300 text-gray-700 hover:border-[#E87230]'
                           }`}
                         onClick={() => toggleColor(color)}
                       >
@@ -311,7 +310,7 @@ export function MerchandisePage() {
               )}
               
               <button
-                className="w-full py-2 bg-[#c1902f] text-white rounded-md hover:bg-[#d4a43f]"
+                className="w-full py-2 bg-[#E87230] text-white rounded-md hover:bg-[#C55A1E]"
                 onClick={() => setShowFilters(false)}
               >
                 Apply Filters
@@ -342,7 +341,7 @@ export function MerchandisePage() {
               <p className="text-gray-500">Try adjusting your filters</p>
               {hasActiveFilters && (
                 <button
-                  className="mt-4 px-4 py-2 bg-[#c1902f] text-white rounded-md hover:bg-[#d4a43f]"
+                  className="mt-4 px-4 py-2 bg-[#E87230] text-white rounded-md hover:bg-[#C55A1E]"
                   onClick={clearFilters}
                 >
                   Clear Filters

@@ -93,7 +93,7 @@ export function VerifyPhonePage() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-[#c1902f] text-white py-2 rounded hover:bg-[#d4a43f] transition-colors"
+                className="w-full bg-[#E87230] text-white py-2 rounded hover:bg-[#C55A1E] transition-colors"
               >
                 {loading ? 'Verifying...' : 'Verify'}
               </button>

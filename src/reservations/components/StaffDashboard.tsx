@@ -1,5 +1,5 @@
 // src/reservations/components/StaffDashboard.tsx
-import React from 'react';
+// No additional imports needed
 import { Outlet, Link, useLocation } from 'react-router-dom';
 
 /**
@@ -8,6 +8,7 @@ import { Outlet, Link, useLocation } from 'react-router-dom';
  */
 export default function StaffDashboard() {
   const location = useLocation();
+  // Colors are defined in Tailwind config
 
   return (
     <div className="bg-white min-h-screen">
@@ -15,7 +16,7 @@ export default function StaffDashboard() {
       <div className="max-w-7xl mx-auto px-4 mt-6">
         <div
           className="
-            bg-hafaloha-gold/5
+            bg-crab-daddy-orange/5
             rounded-md
             shadow
             p-3
@@ -23,6 +24,7 @@ export default function StaffDashboard() {
             items-center
             space-x-2
             overflow-x-auto
+            border-crab-daddy-orange
           "
         >
           <NavTab to="reservations" label="Reservations" currentPath={location.pathname} />
@@ -43,7 +45,7 @@ export default function StaffDashboard() {
 
 /**
  * NavTab
- * Highlights the active tab in Hafaloha brand style.
+ * Highlights the active tab in Crab Daddy brand style.
  */
 function NavTab({
   to,
@@ -72,8 +74,8 @@ function NavTab({
         transition-colors
         ${
           isActive
-            ? 'bg-hafaloha-gold text-white shadow'
-            : 'bg-hafaloha-gold/10 text-hafaloha-gold hover:bg-hafaloha-gold/20'
+            ? 'bg-crab-daddy-orange text-white shadow'
+            : 'bg-crab-daddy-orange/10 text-crab-daddy-orange hover:bg-crab-daddy-orange/20'
         }
       `}
     >

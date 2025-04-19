@@ -272,7 +272,7 @@ export function MenuPage() {
             className={`
               flex-shrink-0 px-4 py-2 rounded-md
               ${selectedCategoryId === null 
-                ? 'bg-[#c1902f] text-white' 
+                ? 'bg-[#E87230] text-white' 
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}
             `}
             onClick={() => setSelectedCategoryId(null)}
@@ -287,7 +287,7 @@ export function MenuPage() {
               className={`
                 flex-shrink-0 px-4 py-2 rounded-md
                 ${selectedCategoryId === cat.id
-                  ? 'bg-[#c1902f] text-white'
+                  ? 'bg-[#E87230] text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}
               `}
               onClick={() => setSelectedCategoryId(cat.id)}
@@ -301,7 +301,7 @@ export function MenuPage() {
       {/* Category Description - Only shown when a category is selected */}
       {selectedCategoryId && selectedCategoryDescription && (
         <div className="animate-fadeIn transition-all duration-300 mb-6">
-          <div className="bg-white/80 backdrop-blur-sm border-l-2 border-[#c1902f]/70 rounded-lg px-4 py-3 sm:p-4 shadow-sm">
+          <div className="bg-white/80 backdrop-blur-sm border-l-2 border-[#E87230]/70 rounded-lg px-4 py-3 sm:p-4 shadow-sm">
             <p className="text-gray-600 font-normal leading-relaxed text-sm sm:text-base">
               {selectedCategoryDescription}
             </p>
@@ -340,7 +340,7 @@ export function MenuPage() {
         {loading ? (
           // Show loading spinner while menu items are loading
           <div className="flex justify-center items-center py-12">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#c1902f]"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#E87230]"></div>
           </div>
         ) : (
           <div className="animate-fadeIn transition-opacity duration-300">

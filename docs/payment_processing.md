@@ -1,6 +1,6 @@
 # Payment Processing System
 
-The Hafaloha platform offers a flexible payment processing system with support for both PayPal and Stripe payment gateways. This document provides an overview of the payment system architecture in the frontend application.
+The Crab Daddy platform offers a flexible payment processing system with support for both PayPal and Stripe payment gateways. This document provides an overview of the payment system architecture in the frontend application.
 
 ## Overview
 

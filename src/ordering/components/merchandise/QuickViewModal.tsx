@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, ChevronLeft, ChevronRight, ShoppingCart, Facebook, Twitter, Share2, XCircle } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ShoppingCart, Facebook, Twitter, Share2, XCircle } from 'lucide-react';
 import { MerchandiseItem, MerchandiseVariant } from '../../types/merchandise';
 import toastUtils from '../../../shared/utils/toastUtils';
 
@@ -149,7 +149,7 @@ const QuickViewModal: React.FC<QuickViewModalProps> = ({
                     onClick={() => setCurrentImageIndex(index)}
                     className={`h-2 w-2 rounded-full ${
                       currentImageIndex === index 
-                        ? 'bg-[#c1902f]' 
+                        ? 'bg-[#FF9900]' 
                         : 'bg-gray-300 hover:bg-gray-400'
                     }`}
                   />
@@ -167,7 +167,7 @@ const QuickViewModal: React.FC<QuickViewModalProps> = ({
                       onClick={() => setCurrentImageIndex(index)}
                       className={`w-12 h-12 rounded border-2 ${
                         currentImageIndex === index 
-                          ? 'border-[#c1902f]' 
+                          ? 'border-[#FF9900]' 
                           : 'border-transparent hover:border-gray-300'
                       }`}
                     >
@@ -273,7 +273,7 @@ const QuickViewModal: React.FC<QuickViewModalProps> = ({
                             className={`
                               h-10 w-12 flex items-center justify-center border text-sm font-medium
                               ${selectedSize === size
-                                ? 'border-[#c1902f] bg-[#c1902f] bg-opacity-10 text-[#c1902f]'
+                                ? 'border-[#FF9900] bg-[#FF9900] bg-opacity-10 text-[#FF9900]'
                                 : 'border-gray-300 text-gray-700 hover:bg-gray-50'}
                               ${!hasInStockVariant ? 'opacity-50 cursor-not-allowed line-through' : ''}
                             `}
@@ -310,7 +310,7 @@ const QuickViewModal: React.FC<QuickViewModalProps> = ({
                         className={`
                           p-1 border rounded-full
                           ${selectedVariant.id === variant.id
-                            ? 'border-[#c1902f] ring-2 ring-[#c1902f] ring-opacity-30'
+                            ? 'border-[#FF9900] ring-2 ring-[#FF9900] ring-opacity-30'
                             : 'border-gray-300 hover:border-gray-400'}
                           ${variant.stock_quantity <= 0 ? 'opacity-50 cursor-not-allowed' : ''}
                         `}
@@ -403,7 +403,7 @@ const QuickViewModal: React.FC<QuickViewModalProps> = ({
                 className={`
                   w-full flex items-center justify-center px-4 py-3 rounded-md border
                   ${!isOutOfStock
-                    ? 'border-[#c1902f] bg-white text-[#c1902f] hover:bg-[#c1902f] hover:bg-opacity-10'
+                    ? 'border-[#FF9900] bg-white text-[#FF9900] hover:bg-[#FF9900] hover:bg-opacity-10'
                     : 'border-gray-300 bg-gray-100 text-gray-500 cursor-not-allowed'}
                   transition-colors duration-200
                 `}
@@ -418,7 +418,7 @@ const QuickViewModal: React.FC<QuickViewModalProps> = ({
                 className={`
                   w-full flex items-center justify-center px-4 py-3 rounded-md
                   ${!isOutOfStock
-                    ? 'bg-[#c1902f] text-white hover:bg-[#d4a43f]'
+                    ? 'bg-[#E87230] text-white hover:bg-[#C55A1E]'
                     : 'bg-gray-300 text-gray-500 cursor-not-allowed'}
                   transition-colors duration-200
                 `}

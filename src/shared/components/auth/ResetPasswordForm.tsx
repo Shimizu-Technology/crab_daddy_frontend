@@ -103,7 +103,7 @@ export function ResetPasswordForm() {
                   value={newPassword}
                   onChange={(e) => setNewPassword(e.target.value)}
                   className="w-full px-4 py-2 border border-gray-300 rounded-md
-                            focus:ring-[#c1902f] focus:border-[#c1902f]"
+                            focus:ring-[#E87230] focus:border-[#E87230]"
                   required
                 />
               </div>
@@ -117,7 +117,7 @@ export function ResetPasswordForm() {
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
                   className="w-full px-4 py-2 border border-gray-300 rounded-md
-                            focus:ring-[#c1902f] focus:border-[#c1902f]"
+                            focus:ring-[#E87230] focus:border-[#E87230]"
                   required
                 />
               </div>
@@ -125,8 +125,8 @@ export function ResetPasswordForm() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-[#c1902f] text-white py-2 px-4 rounded-md
-                          hover:bg-[#d4a43f] transition-colors duration-200
+                className="w-full bg-[#E87230] text-white py-2 px-4 rounded-md
+                          hover:bg-[#C55A1E] transition-colors duration-200
                           disabled:opacity-50"
               >
                 {loading ? 'Resetting...' : 'Reset Password'}

@@ -225,7 +225,7 @@ export function LocationManager({ restaurantId }: LocationManagerProps) {
         
         <button
           onClick={() => setIsAddingLocation(true)}
-          className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-[#0078d4] hover:bg-[#106ebe] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0078d4]"
+          className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-[#E87230] hover:bg-[#C55A1E] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#E87230]"
           disabled={isAddingLocation}
         >
           <Plus className="h-4 w-4 mr-2" />
@@ -247,7 +247,7 @@ export function LocationManager({ restaurantId }: LocationManagerProps) {
                 id="name"
                 value={newLocation.name}
                 onChange={(e) => setNewLocation({ ...newLocation, name: e.target.value })}
-                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#0078d4] focus:border-[#0078d4] sm:text-sm"
+                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#E87230] focus:border-[#E87230] sm:text-sm"
                 required
               />
             </div>
@@ -261,7 +261,7 @@ export function LocationManager({ restaurantId }: LocationManagerProps) {
                 id="address"
                 value={newLocation.address}
                 onChange={(e) => setNewLocation({ ...newLocation, address: e.target.value })}
-                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#0078d4] focus:border-[#0078d4] sm:text-sm"
+                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#E87230] focus:border-[#E87230] sm:text-sm"
                 required
               />
             </div>
@@ -275,7 +275,7 @@ export function LocationManager({ restaurantId }: LocationManagerProps) {
                 id="phone_number"
                 value={newLocation.phone_number}
                 onChange={(e) => setNewLocation({ ...newLocation, phone_number: e.target.value })}
-                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#0078d4] focus:border-[#0078d4] sm:text-sm"
+                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#E87230] focus:border-[#E87230] sm:text-sm"
               />
             </div>
             
@@ -285,7 +285,7 @@ export function LocationManager({ restaurantId }: LocationManagerProps) {
                 id="is_active"
                 checked={newLocation.is_active}
                 onChange={(e) => setNewLocation({ ...newLocation, is_active: e.target.checked })}
-                className="h-4 w-4 text-[#0078d4] focus:ring-[#0078d4] border-gray-300 rounded"
+                className="h-4 w-4 text-[#E87230] focus:ring-[#E87230] border-gray-300 rounded"
               />
               <label htmlFor="is_active" className="ml-2 block text-sm text-gray-700">
                 Active
@@ -298,7 +298,7 @@ export function LocationManager({ restaurantId }: LocationManagerProps) {
                 id="is_default"
                 checked={newLocation.is_default}
                 onChange={(e) => setNewLocation({ ...newLocation, is_default: e.target.checked })}
-                className="h-4 w-4 text-[#0078d4] focus:ring-[#0078d4] border-gray-300 rounded"
+                className="h-4 w-4 text-[#E87230] focus:ring-[#E87230] border-gray-300 rounded"
               />
               <label htmlFor="is_default" className="ml-2 block text-sm text-gray-700">
                 Default Location
@@ -314,13 +314,13 @@ export function LocationManager({ restaurantId }: LocationManagerProps) {
               <button
                 type="button"
                 onClick={() => setIsAddingLocation(false)}
-                className="inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0078d4]"
+                className="inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#E87230]"
               >
                 Cancel
               </button>
               <button
                 type="submit"
-                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-[#0078d4] hover:bg-[#106ebe] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0078d4]"
+                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-[#E87230] hover:bg-[#C55A1E] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#E87230]"
               >
                 Add Location
               </button>
@@ -348,7 +348,7 @@ export function LocationManager({ restaurantId }: LocationManagerProps) {
                           id={`edit-name-${location.id}`}
                           value={newLocation.name}
                           onChange={(e) => setNewLocation({ ...newLocation, name: e.target.value })}
-                          className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#0078d4] focus:border-[#0078d4] sm:text-sm"
+                          className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#E87230] focus:border-[#E87230] sm:text-sm"
                           required
                         />
                       </div>
@@ -362,7 +362,7 @@ export function LocationManager({ restaurantId }: LocationManagerProps) {
                           id={`edit-address-${location.id}`}
                           value={newLocation.address}
                           onChange={(e) => setNewLocation({ ...newLocation, address: e.target.value })}
-                          className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#0078d4] focus:border-[#0078d4] sm:text-sm"
+                          className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#E87230] focus:border-[#E87230] sm:text-sm"
                           required
                         />
                       </div>
@@ -376,7 +376,7 @@ export function LocationManager({ restaurantId }: LocationManagerProps) {
                           id={`edit-phone-${location.id}`}
                           value={newLocation.phone_number}
                           onChange={(e) => setNewLocation({ ...newLocation, phone_number: e.target.value })}
-                          className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#0078d4] focus:border-[#0078d4] sm:text-sm"
+                          className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-[#E87230] focus:border-[#E87230] sm:text-sm"
                         />
                       </div>
                       
@@ -386,7 +386,7 @@ export function LocationManager({ restaurantId }: LocationManagerProps) {
                           id={`edit-active-${location.id}`}
                           checked={newLocation.is_active}
                           onChange={(e) => setNewLocation({ ...newLocation, is_active: e.target.checked })}
-                          className="h-4 w-4 text-[#0078d4] focus:ring-[#0078d4] border-gray-300 rounded"
+                          className="h-4 w-4 text-[#E87230] focus:ring-[#E87230] border-gray-300 rounded"
                         />
                         <label htmlFor={`edit-active-${location.id}`} className="ml-2 block text-sm text-gray-700">
                           Active
@@ -399,7 +399,7 @@ export function LocationManager({ restaurantId }: LocationManagerProps) {
                           id={`edit-default-${location.id}`}
                           checked={newLocation.is_default}
                           onChange={(e) => setNewLocation({ ...newLocation, is_default: e.target.checked })}
-                          className="h-4 w-4 text-[#0078d4] focus:ring-[#0078d4] border-gray-300 rounded"
+                          className="h-4 w-4 text-[#E87230] focus:ring-[#E87230] border-gray-300 rounded"
                           disabled={location.is_default}
                         />
                         <label htmlFor={`edit-default-${location.id}`} className="ml-2 block text-sm text-gray-700">
@@ -416,14 +416,14 @@ export function LocationManager({ restaurantId }: LocationManagerProps) {
                         <button
                           type="button"
                           onClick={cancelEditing}
-                          className="inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0078d4]"
+                          className="inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#E87230]"
                         >
                           Cancel
                         </button>
                         <button
                           type="button"
                           onClick={() => handleUpdateLocation(location.id, newLocation)}
-                          className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-[#0078d4] hover:bg-[#106ebe] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0078d4]"
+                          className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-[#E87230] hover:bg-[#C55A1E] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#E87230]"
                         >
                           Save Changes
                         </button>

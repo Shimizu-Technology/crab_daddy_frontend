@@ -440,8 +440,8 @@ export default function ReservationFormModal({ onClose, onSuccess, defaultDate }
                 onClick={handleCreate}
                 className="
                   px-4 py-2
-                  bg-hafaloha-pink
-                  hover:bg-hafaloha-coral
+                  bg-crab-daddy-orange
+                  hover:bg-crab-daddy-dark-orange
                   text-white
                   rounded
                   transition-colors

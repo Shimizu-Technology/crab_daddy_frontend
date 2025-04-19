@@ -1,6 +1,6 @@
 # Menu Item Inventory Tracking - Frontend Implementation
 
-This document describes the frontend implementation of the menu item inventory tracking system in the Hafaloha application.
+This document describes the frontend implementation of the menu item inventory tracking system in the Crab Daddy application.
 
 ## Overview
 

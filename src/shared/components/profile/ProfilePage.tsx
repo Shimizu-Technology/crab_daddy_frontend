@@ -108,8 +108,8 @@ export function ProfilePage() {
 
   return (
     <div className="max-w-5xl w-full mx-auto px-4 sm:px-6 py-8">
-      <div className="bg-white border border-gray-200 shadow-sm rounded-lg p-6 sm:p-8 md:p-10">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8">My Profile</h1>
+      <div className="bg-white border border-[#E87230] shadow-sm rounded-lg p-6 sm:p-8 md:p-10">
+        <h1 className="text-[#E87230] font-bold mb-8">My Profile</h1>
 
         {error && (
           <div className="mb-6 text-red-600 bg-red-50 border border-red-200 rounded-md p-3">
@@ -173,10 +173,10 @@ export function ProfilePage() {
               disabled={saveLoading}
               className={`
                 inline-flex items-center px-6 py-3 text-lg
-                bg-[#c1902f] text-white font-medium
-                rounded-md hover:bg-[#d4a43f]
+                bg-[#E87230] text-white font-medium
+                rounded-md hover:bg-[#C55A1E]
                 focus:outline-none focus:ring-2 focus:ring-offset-2
-                focus:ring-[#c1902f] transition-all
+                focus:ring-[#E87230] transition-all
                 ${saveLoading ? 'opacity-70 cursor-not-allowed' : 'active:scale-95'}
               `}
             >

@@ -121,7 +121,7 @@ function ReservationConfirmation({
     <div className="relative p-6 max-w-md sm:max-w-xl mx-auto bg-white rounded-lg shadow-lg">
       {/* Pink check bubble */}
       <div className="absolute left-1/2 -top-8 -translate-x-1/2">
-        <div className="bg-hafaloha-pink text-white p-3 rounded-full shadow-lg">
+        <div className="bg-[#E87230] text-white p-3 rounded-full shadow-lg">
           <Check className="h-7 w-7" />
         </div>
       </div>
@@ -130,7 +130,7 @@ function ReservationConfirmation({
         <h2 className="text-2xl sm:text-3xl font-bold">Reservation Confirmed!</h2>
         <p className="text-gray-600 mt-1">
           {reservation.firstName ? `Thank you, ${reservation.firstName}! ` : 'Thank you! '}
-          We’re excited to serve you at Hafaloha.
+          We’re excited to serve you at Crab Daddy.
         </p>
       </div>
 
@@ -141,7 +141,7 @@ function ReservationConfirmation({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Date & Time */}
           <div className="flex items-start space-x-2">
-            <CalendarClock className="h-5 w-5 text-hafaloha-pink mt-0.5" />
+            <CalendarClock className="h-5 w-5 text-[#E87230] mt-0.5" />
             <div>
               <p className="font-medium text-gray-900">Date &amp; Time</p>
               <p className="text-gray-600">{dateStr}</p>
@@ -151,7 +151,7 @@ function ReservationConfirmation({
 
           {/* Party & Duration */}
           <div className="flex items-start space-x-2">
-            <Users className="h-5 w-5 text-hafaloha-pink mt-0.5" />
+            <Users className="h-5 w-5 text-[#E87230] mt-0.5" />
             <div>
               <p className="font-medium text-gray-900">Party Size</p>
               <p className="text-gray-600">
@@ -165,7 +165,7 @@ function ReservationConfirmation({
           {/* Contact */}
           {(reservation.phone || reservation.email) && (
             <div className="flex items-start space-x-2 md:col-span-2">
-              <Mail className="h-5 w-5 text-hafaloha-pink mt-0.5" />
+              <Mail className="h-5 w-5 text-[#E87230] mt-0.5" />
               <div>
                 <p className="font-medium text-gray-900">Contact Information</p>
                 {reservation.phone && (
@@ -180,7 +180,7 @@ function ReservationConfirmation({
 
           {/* Location */}
           <div className="flex items-start space-x-2">
-            <MapPin className="h-5 w-5 text-hafaloha-pink mt-0.5" />
+            <MapPin className="h-5 w-5 text-[#E87230] mt-0.5" />
             <div>
               <p className="font-medium text-gray-900">Location</p>
               <p className="text-gray-600">955 Pale San Vitores Rd</p>
@@ -194,7 +194,7 @@ function ReservationConfirmation({
       <div className="flex flex-col sm:flex-row gap-3">
         <button
           onClick={onClose}
-          className="w-full sm:w-auto flex-1 bg-hafaloha-coral hover:bg-hafaloha-pink text-white font-medium py-2 sm:py-3 px-4 rounded-lg transition-colors"
+          className="w-full sm:w-auto flex-1 bg-[#C55A1E] hover:bg-[#E87230] text-white font-medium py-2 sm:py-3 px-4 rounded-lg transition-colors"
         >
           Done
         </button>
@@ -416,7 +416,7 @@ export default function ReservationForm({
                 px-3 py-2
                 border border-gray-300
                 rounded-md
-                focus:ring-2 focus:ring-hafaloha-pink focus:border-hafaloha-pink
+                focus:ring-2 focus:ring-[#E87230] focus:border-[#E87230]
                 text-sm sm:text-base
               "
               placeholderText="Select date"
@@ -481,7 +481,7 @@ export default function ReservationForm({
                   py-2
                   border border-gray-300
                   rounded-md
-                  focus:ring-2 focus:ring-hafaloha-pink focus:border-hafaloha-pink
+                  focus:ring-2 focus:ring-[#E87230] focus:border-[#E87230]
                   text-sm sm:text-base
                 "
               />
@@ -531,7 +531,7 @@ export default function ReservationForm({
                 px-3 py-2
                 border border-gray-300
                 rounded-md
-                focus:ring-2 focus:ring-hafaloha-pink focus:border-hafaloha-pink
+                focus:ring-2 focus:ring-[#E87230] focus:border-[#E87230]
                 text-sm sm:text-base
               "
             />
@@ -556,7 +556,7 @@ export default function ReservationForm({
                 px-3 py-2
                 border border-gray-300
                 rounded-md
-                focus:ring-2 focus:ring-hafaloha-pink focus:border-hafaloha-pink
+                focus:ring-2 focus:ring-[#E87230] focus:border-[#E87230]
                 text-sm sm:text-base
               "
             />
@@ -592,7 +592,7 @@ export default function ReservationForm({
                   py-2
                   border border-gray-300
                   rounded-md
-                  focus:ring-2 focus:ring-hafaloha-pink focus:border-hafaloha-pink
+                  focus:ring-2 focus:ring-[#E87230] focus:border-[#E87230]
                   text-sm sm:text-base
                 "
               />
@@ -621,7 +621,7 @@ export default function ReservationForm({
                   py-2
                   border border-gray-300
                   rounded-md
-                  focus:ring-2 focus:ring-hafaloha-pink focus:border-hafaloha-pink
+                  focus:ring-2 focus:ring-[#E87230] focus:border-[#E87230]
                   text-sm sm:text-base
                 "
               />
@@ -635,8 +635,8 @@ export default function ReservationForm({
             type="submit"
             className="
               w-full
-              bg-hafaloha-pink
-              hover:bg-hafaloha-coral
+              bg-[#E87230]
+              hover:bg-[#C55A1E]
               text-white
               py-2 sm:py-3
               px-4 sm:px-6

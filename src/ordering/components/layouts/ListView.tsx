@@ -39,7 +39,7 @@ export const ListView: React.FC<ListViewProps> = ({
       {loading ? (
         // Show loading spinner while menu items are loading
         <div className="flex justify-center items-center py-12">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#c1902f]"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#E87230]"></div>
         </div>
       ) : (
         <div className="animate-fadeIn transition-opacity duration-300">
@@ -103,7 +103,7 @@ const ListViewItem: React.FC<{ item: MenuItem }> = ({ item }) => {
     !item.image || 
     item.image.includes('default-placeholder') || 
     item.image.includes('placeholder') || 
-    item.image.includes('hafaloha.png') || 
+    item.image.includes('crab-daddy') || 
     item.image.includes('default.') || 
     item.image.includes('no-image')
   );
@@ -161,7 +161,7 @@ const ListViewItem: React.FC<{ item: MenuItem }> = ({ item }) => {
 
   // Get primary color based on restaurant
   const getPrimaryColor = () => {
-    return restaurant?.id === 2 ? '#0078d4' : '#c1902f';
+    return restaurant?.id === 2 ? '#0078d4' : '#E87230';
   };
   
   // Get category icon based on category ID or name
@@ -364,7 +364,7 @@ const ListViewItem: React.FC<{ item: MenuItem }> = ({ item }) => {
               }}
               className={`
                 flex items-center justify-center px-2 py-1 sm:px-3 sm:py-1.5 rounded-md
-                ${isOutOfStock || hasUnavailableRequiredOptions ? 'bg-gray-400' : 'bg-[#c1902f] hover:bg-[#d4a43f]'}
+                ${isOutOfStock || hasUnavailableRequiredOptions ? 'bg-gray-400' : 'bg-[#E87230] hover:bg-[#C55A1E]'}
                 text-white
                 transition-all duration-200 ease-in-out
                 text-xs font-medium shadow-sm hover:shadow

@@ -2,9 +2,9 @@ import React from 'react';
 
 // Brand colors
 export const brandColors = {
-  primary: '#c1902f',
-  primaryHover: '#d4a43f',
-  primaryLight: '#f5ecd9',
+  primary: '#E87230',
+  primaryHover: '#C55A1E',
+  primaryLight: '#FFDBC9',
   secondary: '#6c757d',
   success: '#28a745',
   danger: '#dc3545',
@@ -77,7 +77,7 @@ export const CardFieldContainer: React.FC<{children: React.ReactNode}> = ({ chil
 // Loading indicator component
 export const LoadingIndicator: React.FC<{text?: string}> = ({ text = "Loading..." }) => (
   <div className="flex justify-center items-center p-6">
-    <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-[#c1902f]"></div>
+    <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-[#E87230]"></div>
     <span className="ml-3 text-gray-600">{text}</span>
   </div>
 );

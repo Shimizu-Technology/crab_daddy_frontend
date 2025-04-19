@@ -1,10 +1,10 @@
 # WebSocket Integration
 
-This document provides a comprehensive guide to the WebSocket implementation in the Hafaloha frontend application, which enables real-time updates for orders, inventory, and other critical data.
+This document provides a comprehensive guide to the WebSocket implementation in the Crab Daddy frontend application, which enables real-time updates for orders, inventory, and other critical data.
 
 ## Overview
 
-The Hafaloha application uses WebSockets to provide real-time updates, replacing the previous polling-based approach. This offers several advantages:
+The Crab Daddy application uses WebSockets to provide real-time updates, replacing the previous polling-based approach. This offers several advantages:
 
 - **Real-time Updates**: Instant notification of new orders and inventory changes
 - **Reduced Server Load**: Fewer HTTP requests and overhead

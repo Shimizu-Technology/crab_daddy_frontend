@@ -534,8 +534,8 @@ export default function SeatLayoutEditor() {
 
   return (
     <div className="bg-white shadow rounded-md">
-      {/* Hafaloha-style header */}
-      <div className="border-b border-gray-200 bg-hafaloha-gold/5 rounded-t-md px-4 py-3">
+      {/* Crab Daddy-style header */}
+      <div className="border-b border-gray-200 bg-crab-daddy-orange/5 rounded-t-md px-4 py-3">
         <h2 className="text-xl font-bold text-gray-900">Layout Editor</h2>
       </div>
 
@@ -590,7 +590,7 @@ export default function SeatLayoutEditor() {
             className={`
               px-3 py-1 rounded text-sm
               ${showGrid
-                ? 'bg-hafaloha-gold/10 text-hafaloha-gold border border-hafaloha-gold/20'
+                ? 'bg-[#F0C14B]/10 text-[#F0C14B] border border-[#F0C14B]/20'
                 : 'bg-gray-100 text-gray-600'
               }
             `}
@@ -640,8 +640,8 @@ export default function SeatLayoutEditor() {
             onClick={handleSaveLayout}
             className="
               flex items-center px-4 py-2
-              bg-hafaloha-gold text-white rounded
-              hover:bg-hafaloha-coral
+              bg-crab-daddy-orange text-white rounded
+              hover:bg-crab-daddy-dark-orange
               transition-colors
             "
           >
@@ -674,8 +674,8 @@ export default function SeatLayoutEditor() {
               className={`
                 px-4 py-2 rounded text-sm
                 ${floorNum === activeFloor
-                  ? 'bg-hafaloha-gold/10 text-hafaloha-gold border border-hafaloha-gold/20'
-                  : 'bg-gray-100 text-gray-700 hover:bg-hafaloha-gold/5'
+                  ? 'bg-crab-daddy-orange/10 text-crab-daddy-orange border border-crab-daddy-orange/20'
+                  : 'bg-gray-100 text-gray-700 hover:bg-crab-daddy-orange/5'
                 }
               `}
             >
@@ -825,8 +825,8 @@ export default function SeatLayoutEditor() {
           onClick={handleAddSection}
           className="
             flex items-center px-4 py-2
-            bg-hafaloha-gold text-white rounded
-            hover:bg-hafaloha-coral
+            bg-[#F0C14B] text-white rounded
+            hover:bg-[#C55A1E]
             transition-colors
             mt-4
           "
@@ -963,7 +963,7 @@ export default function SeatLayoutEditor() {
                   sections.find((s) => s.id === editingSectionId)?.seats.length ? (
                   <button
                     onClick={() => handleOpenRenameModal(editingSectionId!)}
-                    className="px-4 py-2 bg-hafaloha-gold text-white rounded hover:bg-hafaloha-coral text-sm"
+                    className="px-4 py-2 bg-crab-daddy-orange text-white rounded hover:bg-crab-daddy-dark-orange text-sm"
                   >
                     Rename Seats
                   </button>
@@ -977,7 +977,7 @@ export default function SeatLayoutEditor() {
                 </button>
                 <button
                   onClick={createOrEditSection}
-                  className="px-4 py-2 bg-hafaloha-gold text-white rounded hover:bg-hafaloha-coral text-sm"
+                  className="px-4 py-2 bg-[#F0C14B] text-white rounded hover:bg-[#C55A1E] text-sm"
                 >
                   {editingSectionId ? 'Save' : 'Create'}
                 </button>

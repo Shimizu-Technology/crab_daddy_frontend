@@ -130,7 +130,7 @@ export const useMenuStore = create<MenuState>((set, get) => ({
       console.debug(`[MenuStore] Fetched all ${allMenus.length} menus for restaurant ${restId}`);
       return allMenus;
     } catch (error) {
-      const errorMessage = handleApiError(error);
+      handleApiError(error);
       console.error('[MenuStore] Error fetching all menus:', error);
       return [];
     }

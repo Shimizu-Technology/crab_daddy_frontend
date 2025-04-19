@@ -146,7 +146,7 @@ export function OrderHistory() {
         {/* Filter toggle button */}
         <button 
           onClick={() => setIsFilterExpanded(!isFilterExpanded)}
-          className="flex items-center text-sm font-medium text-gray-700 hover:text-[#c1902f] transition-colors"
+          className="flex items-center text-sm font-medium text-gray-700 hover:text-[#E87230] transition-colors"
         >
           <Filter className="h-4 w-4 mr-2" />
           {isFilterExpanded ? 'Hide Filters' : 'Show Filters'}
@@ -166,7 +166,7 @@ export function OrderHistory() {
                   className={`
                     whitespace-nowrap px-4 py-2 rounded-md text-xs font-medium min-w-[80px] flex-shrink-0
                     ${statusFilter === 'all'
-                      ? 'bg-[#c1902f] text-white shadow-sm'
+                      ? 'bg-[#E87230] text-white shadow-sm'
                       : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50'
                     }
                   `}
@@ -180,7 +180,7 @@ export function OrderHistory() {
                     className={`
                       whitespace-nowrap px-4 py-2 rounded-md text-xs font-medium min-w-[80px] flex-shrink-0
                       ${statusFilter === status
-                        ? 'bg-[#c1902f] text-white shadow-sm'
+                        ? 'bg-[#E87230] text-white shadow-sm'
                         : 'bg-white text-gray-700 border border-gray-300 hover:bg-gray-50'
                       }
                     `}
@@ -214,7 +214,7 @@ export function OrderHistory() {
               setStatusFilter('all');
               setSortOption('newest');
             }}
-            className="mt-3 text-sm text-[#c1902f] hover:underline font-medium"
+            className="mt-3 text-sm text-[#E87230] hover:underline font-medium"
           >
             Clear filters
           </button>
@@ -308,7 +308,7 @@ export function OrderHistory() {
                     onClick={() => setCurrentPage(page)}
                     className={`w-8 h-8 flex items-center justify-center rounded-md text-sm ${
                       currentPage === page
-                        ? 'bg-[#c1902f] text-white'
+                        ? 'bg-[#E87230] text-white'
                         : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                     }`}
                   >

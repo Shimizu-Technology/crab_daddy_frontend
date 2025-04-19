@@ -243,7 +243,7 @@ export function MenusSettings({ restaurantId }: MenusSettingsProps) {
         />
         <button
           onClick={handleOpenCreateModal}
-          className="inline-flex items-center px-3 py-2 bg-[#c1902f] text-white rounded-md hover:bg-[#d4a43f] w-auto"
+          className="inline-flex items-center px-3 py-2 bg-[#E87230] text-white rounded-md hover:bg-[#C55A1E] w-auto"
           disabled={loading}
         >
           <Plus className="h-4 w-4 mr-1" />
@@ -552,7 +552,7 @@ export function MenusSettings({ restaurantId }: MenusSettingsProps) {
               <button
                 type="button"
                 onClick={handleSaveMenu}
-                className="inline-flex items-center px-4 py-2 bg-[#c1902f] text-white rounded-md hover:bg-[#d4a43f] transition-colors duration-200"
+                className="inline-flex items-center px-4 py-2 bg-[#E87230] text-white rounded-md hover:bg-[#C55A1E] transition-colors duration-200"
                 disabled={loading}
               >
                 <Save className="h-5 w-5 mr-2" />

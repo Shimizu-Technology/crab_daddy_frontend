@@ -179,7 +179,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
         
         <button
           onClick={onClearAll}
-          className="mb-4 text-sm text-[#c1902f] hover:text-[#d4a43f] transition-colors"
+          className="mb-4 text-sm text-[#E87230] hover:text-[#C55A1E] transition-colors"
         >
           Clear All
         </button>
@@ -193,7 +193,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
                 onClick={() => toggleSize(size)}
                 className={`h-9 w-10 flex items-center justify-center text-sm border ${
                   activeFilters.sizes.includes(size)
-                    ? 'border-[#c1902f] bg-[#c1902f] bg-opacity-10 text-[#c1902f]'
+                    ? 'border-[#E87230] bg-[#E87230] bg-opacity-10 text-[#E87230]'
                     : 'border-gray-300 text-gray-700 hover:bg-gray-50'
                 }`}
               >
@@ -219,7 +219,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
                   className={`
                     p-0.5 border rounded-full
                     ${activeFilters.colors.includes(color)
-                      ? 'border-[#c1902f] ring-2 ring-[#c1902f] ring-opacity-30'
+                      ? 'border-[#E87230] ring-2 ring-[#E87230] ring-opacity-30'
                       : 'border-gray-300 hover:border-gray-500'}
                   `}
                   title={color}
@@ -269,7 +269,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
                 className={`py-2 px-3 text-sm border rounded text-left ${
                   activeFilters.priceRange?.min === range.min && 
                   activeFilters.priceRange?.max === range.max
-                    ? 'border-[#c1902f] bg-[#c1902f] bg-opacity-10 text-[#c1902f]'
+                    ? 'border-[#E87230] bg-[#E87230] bg-opacity-10 text-[#E87230]'
                     : 'border-gray-300 text-gray-700 hover:bg-gray-50'
                 }`}
               >
@@ -294,7 +294,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
                 const value = parseInt(e.target.value);
                 setPriceRange(value === 0 ? null : { min: value, max: Infinity });
               }}
-              className="w-full accent-[#c1902f]" 
+              className="w-full accent-[#E87230]" 
             />
           </div>
         </FilterSection>
@@ -308,7 +308,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
                 onClick={() => toggleAvailability(status)}
                 className={`py-2 px-3 text-sm border rounded text-left flex items-center ${
                   activeFilters.availability.includes(status)
-                    ? 'border-[#c1902f] bg-[#c1902f] bg-opacity-10 text-[#c1902f]'
+                    ? 'border-[#E87230] bg-[#E87230] bg-opacity-10 text-[#E87230]'
                     : 'border-gray-300 text-gray-700 hover:bg-gray-50'
                 }`}
               >
@@ -333,7 +333,7 @@ const FilterSidebar: React.FC<FilterSidebarProps> = ({
           </button>
           <button
             onClick={onClose}
-            className="flex-1 py-2 px-4 bg-[#c1902f] text-white rounded-md hover:bg-[#d4a43f] transition-colors"
+            className="flex-1 py-2 px-4 bg-[#E87230] text-white rounded-md hover:bg-[#C55A1E] transition-colors"
           >
             Apply
           </button>

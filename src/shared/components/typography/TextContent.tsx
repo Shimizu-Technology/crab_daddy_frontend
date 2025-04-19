@@ -101,7 +101,7 @@ export const TextContent: React.FC<TextContentProps> = ({
       {expandable && maxLines > 0 && text.length > 100 && (
         <button
           onClick={() => setExpanded(!expanded)}
-          className="mt-1 text-sm font-medium text-[#c1902f] hover:text-[#d4a43f] transition-colors"
+          className="mt-1 text-sm font-medium text-[#E87230] hover:text-[#C55A1E] transition-colors"
         >
           {expanded ? 'Show less' : 'Read more'}
         </button>

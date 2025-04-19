@@ -221,7 +221,7 @@ export default function SeatPreferenceMapModal({
                 onClick={() => handleOptionTabClick(idx)}
                 className={
                   isActive
-                    ? 'px-3 py-1 rounded border border-hafaloha-pink bg-hafaloha-pink/10 text-hafaloha-pink'
+                    ? 'px-3 py-1 rounded border border-[#E87230] bg-[#E87230]/10 text-[#E87230]'
                     : 'px-3 py-1 rounded bg-gray-100 hover:bg-gray-200'
                 }
               >
@@ -242,7 +242,7 @@ export default function SeatPreferenceMapModal({
                   onClick={() => handleFloorTabClick(floorNum)}
                   className={
                     isActive
-                      ? 'px-3 py-1 rounded border border-hafaloha-pink bg-hafaloha-pink/10 text-hafaloha-pink'
+                      ? 'px-3 py-1 rounded border border-crab-daddy-orange bg-crab-daddy-orange/10 text-crab-daddy-orange'
                       : 'px-3 py-1 rounded bg-gray-100 hover:bg-gray-200'
                   }
                 >
@@ -259,7 +259,7 @@ export default function SeatPreferenceMapModal({
             onClick={() => setShowGrid(!showGrid)}
             className={`px-2 py-1 text-sm rounded border ${
               showGrid
-                ? 'border-hafaloha-pink bg-hafaloha-pink/10 text-hafaloha-pink'
+                ? 'border-crab-daddy-orange bg-crab-daddy-orange/10 text-crab-daddy-orange'
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
             }`}
           >
@@ -334,7 +334,7 @@ export default function SeatPreferenceMapModal({
           </button>
           <button
             onClick={handleSave}
-            className="px-4 py-2 bg-hafaloha-pink hover:bg-hafaloha-coral text-white rounded"
+            className="px-4 py-2 bg-crab-daddy-orange hover:bg-crab-daddy-dark-orange text-white rounded"
           >
             Save
           </button>

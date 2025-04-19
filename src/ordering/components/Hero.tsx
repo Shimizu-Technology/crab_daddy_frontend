@@ -57,8 +57,8 @@ export function Hero() {
               to="/menu"
               className="inline-flex items-center justify-center px-6 py-3.5
                         border border-transparent text-base font-medium rounded-md 
-                        text-white bg-[#c1902f] shadow-md
-                        hover:bg-[#d4a43f] hover:shadow-lg transform hover:-translate-y-0.5
+                        text-white bg-[#E87230] shadow-md
+                        hover:bg-[#C55A1E] hover:shadow-lg transform hover:-translate-y-0.5
                         transition-all duration-200 ease-in-out"
             >
               Order Now

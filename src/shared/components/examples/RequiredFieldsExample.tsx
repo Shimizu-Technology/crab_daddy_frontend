@@ -75,8 +75,8 @@ export function RequiredFieldsExample() {
 
         <button
           type="submit"
-          className="w-full bg-[#c1902f] text-white py-2 px-4 rounded-md
-                    hover:bg-[#d4a43f] transition-colors duration-200"
+          className="w-full bg-[#E87230] text-white py-2 px-4 rounded-md
+                    hover:bg-[#C55A1E] transition-colors duration-200"
         >
           Submit
         </button>

@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background-color: #c1902f;
+  background-color: #E87230;
   color: white;
   font-weight: 500;
   border-radius: 9999px;
@@ -43,7 +43,7 @@
 
 /* Hover state */
 .fixed-acknowledge-button:hover {
-  background-color: #d4a43f;
+  background-color: #C55A1E;
 }
 
 /* Disabled state */

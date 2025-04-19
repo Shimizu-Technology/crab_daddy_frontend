@@ -164,7 +164,7 @@ export default function ReservationsTab() {
                   pl-10 pr-4 py-2 w-full
                   border border-gray-300
                   rounded-md
-                  focus:ring-2 focus:ring-hafaloha-gold focus:border-hafaloha-gold
+                  focus:ring-2 focus:ring-[#F0C14B] focus:border-[#F0C14B]
                   text-sm
                 "
               />
@@ -199,8 +199,8 @@ export default function ReservationsTab() {
                     pl-10 pr-4 py-2 w-36
                     border border-gray-300
                     rounded-md
-                    focus:ring-2 focus:ring-hafaloha-gold
-                    focus:border-hafaloha-gold
+                    focus:ring-2 focus:ring-[#F0C14B]
+                    focus:border-[#F0C14B]
                     text-sm
                   "
                 />
@@ -227,12 +227,12 @@ export default function ReservationsTab() {
               onClick={handleCreateNewReservation}
               className="
                 px-4 py-2
-                bg-hafaloha-gold
+                bg-[#F0C14B]
                 text-white
                 text-sm
                 font-medium
                 rounded-md
-                hover:bg-[#d4a43f]
+                hover:bg-[#C55A1E]
                 transition-colors
               "
             >
@@ -366,21 +366,21 @@ function renderStatusBadge(status?: string) {
       // brand: gold or pink, up to you:
       return (
         <span className="px-2 inline-flex text-xs leading-5 font-semibold
-          rounded-full bg-hafaloha-gold/20 text-hafaloha-gold">
+          rounded-full bg-[#F0C14B]/20 text-[#F0C14B]">
           booked
         </span>
       );
     case 'reserved':
       return (
         <span className="px-2 inline-flex text-xs leading-5 font-semibold
-          rounded-full bg-hafaloha-coral/20 text-hafaloha-coral">
+          rounded-full bg-[#C55A1E]/20 text-[#C55A1E]">
           reserved
         </span>
       );
     case 'seated':
       return (
         <span className="px-2 inline-flex text-xs leading-5 font-semibold
-          rounded-full bg-hafaloha-teal/20 text-hafaloha-teal">
+          rounded-full bg-[#4A9ED6]/20 text-[#4A9ED6]">
           seated
         </span>
       );

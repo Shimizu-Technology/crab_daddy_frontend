@@ -59,7 +59,7 @@ export default function WaitlistTab() {
   return (
     <div className="bg-white shadow rounded-md p-4">
       {/* Top toolbar for search; optionally also a date nav if desired */}
-      <div className="border-b border-gray-200 bg-hafaloha-gold/5 rounded-md p-4">
+      <div className="border-b border-gray-200 bg-[#F0C14B]/5 rounded-md p-4">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           {/* If you want a date nav, replicate the approach from ReservationsTab. 
               For simplicity, we'll just show the search bar. */}
@@ -74,7 +74,7 @@ export default function WaitlistTab() {
                 pl-10 pr-4 py-2 w-full
                 border border-gray-300
                 rounded-md
-                focus:ring-2 focus:ring-hafaloha-gold focus:border-hafaloha-gold
+                focus:ring-2 focus:ring-[#F0C14B] focus:border-[#F0C14B]
                 text-sm
               "
             />
@@ -120,7 +120,7 @@ export default function WaitlistTab() {
               return (
                 <tr
                   key={w.id}
-                  className="hover:bg-hafaloha-gold/5 cursor-pointer"
+                  className="hover:bg-[#F0C14B]/5 cursor-pointer"
                 >
                   {/* Time Joined */}
                   <td className="px-6 py-4 text-gray-900 whitespace-nowrap">
@@ -193,7 +193,7 @@ function renderWaitlistStatusBadge(status?: string) {
       // gold for "waiting"
       return (
         <span className="px-2 inline-flex text-xs leading-5 font-semibold
-          rounded-full bg-hafaloha-gold/20 text-hafaloha-gold">
+          rounded-full bg-[#F0C14B]/20 text-[#F0C14B]">
           waiting
         </span>
       );
@@ -201,7 +201,7 @@ function renderWaitlistStatusBadge(status?: string) {
       // Teal for "seated"
       return (
         <span className="px-2 inline-flex text-xs leading-5 font-semibold
-          rounded-full bg-hafaloha-teal/20 text-hafaloha-teal">
+          rounded-full bg-[#4A9ED6]/20 text-[#4A9ED6]">
           seated
         </span>
       );

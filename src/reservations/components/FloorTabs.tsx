@@ -48,8 +48,8 @@ export default function FloorTabs({
               className={`
                 px-4 py-2 rounded transition-colors
                 ${isActive
-                  ? 'bg-hafaloha-gold/10 text-hafaloha-gold border border-hafaloha-gold/20'
-                  : 'bg-gray-100 text-gray-700 hover:bg-hafaloha-gold/5'
+                  ? 'bg-crab-daddy-orange/10 text-crab-daddy-orange border border-crab-daddy-orange/20'
+                  : 'bg-gray-100 text-gray-700 hover:bg-crab-daddy-orange/5'
                 }
               `}
             >

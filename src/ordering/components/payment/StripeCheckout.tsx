@@ -173,7 +173,7 @@ export const StripeCheckout = React.forwardRef<StripeCheckoutRef, StripeCheckout
       appearance: {
         theme: 'stripe',
         variables: {
-          colorPrimary: '#c1902f',
+          colorPrimary: '#E87230',
         },
       },
       // Configure payment flow

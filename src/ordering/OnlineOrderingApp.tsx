@@ -278,7 +278,7 @@ export default function OnlineOrderingApp() {
                 {featuredItemsLoading ? (
                   // Show loading spinner while featured items are loading
                   <div className="flex justify-center items-center py-12">
-                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#c1902f]"></div>
+                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[#E87230]"></div>
                   </div>
                 ) : featuredItems.length > 0 ? (
                   // Show Popular Items with an improved layout
@@ -288,11 +288,11 @@ export default function OnlineOrderingApp() {
                         <h2 className="text-2xl sm:text-3xl font-display text-gray-900 relative z-10">
                           Popular Items
                         </h2>
-                        <div className="absolute bottom-0 left-0 h-3 w-48 bg-[#c1902f] opacity-20 rounded-full"></div>
+                        <div className="absolute bottom-0 left-0 h-3 w-48 bg-[#E87230] opacity-20 rounded-full"></div>
                       </div>
                       <Link 
                         to="/menu" 
-                        className="text-sm font-medium text-[#c1902f] hover:text-[#d4a43f] transition-colors flex items-center"
+                        className="text-sm font-medium text-[#E87230] hover:text-[#C55A1E] transition-colors flex items-center"
                       >
                         View All
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">

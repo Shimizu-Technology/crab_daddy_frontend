@@ -128,8 +128,8 @@ export function MerchandiseItem({ item }: MerchandiseItemProps) {
                 ${isOutOfStock
                   ? 'bg-gray-400 cursor-not-allowed'
                   : hasVariants
-                    ? 'bg-[#c1902f] hover:bg-[#d4a43f]'
-                    : 'bg-[#c1902f] hover:bg-[#d4a43f]'
+                    ? 'bg-[#E87230] hover:bg-[#C55A1E]'
+                    : 'bg-[#E87230] hover:bg-[#C55A1E]'
                 }`}
               onClick={handleQuickAdd}
               disabled={isOutOfStock}
@@ -146,7 +146,7 @@ export function MerchandiseItem({ item }: MerchandiseItemProps) {
         {/* Item details */}
         <div className="p-4">
           <h3 className="text-sm font-medium text-gray-900 truncate">{item.name}</h3>
-          <p className="mt-1 text-sm font-medium text-[#c1902f]">
+          <p className="mt-1 text-sm font-medium text-[#E87230]">
             ${calculateFinalPrice(item).toFixed(2)}
           </p>
         </div>

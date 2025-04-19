@@ -185,7 +185,7 @@ export function CategoryManagementModal({
       <div className="bg-white rounded-lg max-w-3xl w-full p-4 sm:p-6 max-h-[90vh] overflow-y-auto transform transition-all duration-300 ease-in-out animate-slideUp shadow-xl">
         <div className="flex justify-between items-center mb-6 pb-3 border-b">
           <div className="flex items-center">
-            <Layers className="h-5 w-5 text-[#c1902f] mr-2" />
+            <Layers className="h-5 w-5 text-[#E87230] mr-2" />
             <h3 className="text-xl font-semibold text-gray-800">
               Categories for {menu.name}
             </h3>
@@ -227,7 +227,7 @@ export function CategoryManagementModal({
                     type="text"
                     value={newCategoryName}
                     onChange={(e) => setNewCategoryName(e.target.value)}
-                    className="border border-gray-300 p-2 rounded-md w-full focus:ring-2 focus:ring-[#c1902f] focus:border-[#c1902f] focus:outline-none transition-colors"
+                    className="border border-gray-300 p-2 rounded-md w-full focus:ring-2 focus:ring-[#E87230] focus:border-[#E87230] focus:outline-none transition-colors"
                     placeholder="e.g. Beverages"
                     required
                   />
@@ -240,7 +240,7 @@ export function CategoryManagementModal({
                   <textarea
                     value={newCategoryDescription}
                     onChange={(e) => setNewCategoryDescription(e.target.value)}
-                    className="border border-gray-300 p-2 rounded-md w-full focus:ring-2 focus:ring-[#c1902f] focus:border-[#c1902f] focus:outline-none transition-colors"
+                    className="border border-gray-300 p-2 rounded-md w-full focus:ring-2 focus:ring-[#E87230] focus:border-[#E87230] focus:outline-none transition-colors"
                     placeholder="Brief description of this category"
                     rows={3}
                   />

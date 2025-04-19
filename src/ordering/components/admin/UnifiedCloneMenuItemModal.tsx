@@ -146,7 +146,7 @@ export function UnifiedCloneMenuItemModal({
           <div className="flex border-b mb-4">
             <button
               className={`flex items-center px-4 py-2 ${cloneMode === 'same_menu' 
-                ? 'border-b-2 border-[#c1902f] text-[#c1902f] font-medium' 
+                ? 'border-b-2 border-[#E87230] text-[#E87230] font-medium' 
                 : 'text-gray-500 hover:text-gray-700'}`}
               onClick={() => setCloneMode('same_menu')}
             >
@@ -155,7 +155,7 @@ export function UnifiedCloneMenuItemModal({
             </button>
             <button
               className={`flex items-center px-4 py-2 ${cloneMode === 'different_menu' 
-                ? 'border-b-2 border-[#c1902f] text-[#c1902f] font-medium' 
+                ? 'border-b-2 border-[#E87230] text-[#E87230] font-medium' 
                 : 'text-gray-500 hover:text-gray-700'}`}
               onClick={() => setCloneMode('different_menu')}
             >
@@ -311,7 +311,7 @@ export function UnifiedCloneMenuItemModal({
           <button
             type="button"
             onClick={handleClone}
-            className="inline-flex items-center px-4 py-2 bg-[#c1902f] text-white rounded-md hover:bg-[#d4a43f] transition-colors duration-200"
+            className="inline-flex items-center px-4 py-2 bg-[#E87230] text-white rounded-md hover:bg-[#C55A1E] transition-colors duration-200"
             disabled={loading || 
               (cloneMode === 'same_menu' && (!newName.trim() || selectedCategories.length === 0)) ||
               (cloneMode === 'different_menu' && (!selectedMenuId || selectedCategories.length === 0))

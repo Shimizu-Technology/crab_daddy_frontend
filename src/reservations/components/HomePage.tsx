@@ -3,9 +3,9 @@
 // import ReservationForm from './ReservationForm';
 
 // // Local images
-// import burgerImg from '../../assets/Hafaloha_Burger.webp';
-// import pokeImg from '../../assets/Hafaloha_Poke.webp';
-// import shavedIceImg from '../../assets/Hafaloha_ShaveIce.webp';
+// import seafoodImg from '../../assets/CrabDaddy_Seafood.webp';
+// import crabImg from '../../assets/CrabDaddy_Crab.webp';
+// import shrimpImg from '../../assets/CrabDaddy_Shrimp.webp';
 
 // function ReservationModal({
 //   isOpen,
@@ -75,7 +75,7 @@
 //             </p>
 //             <button
 //               onClick={() => setIsReservationOpen(true)}
-//               className="bg-hafaloha-pink hover:bg-hafaloha-coral text-white px-6 md:px-8 py-2 md:py-3 rounded-full text-base md:text-lg transition-colors"
+//               className="bg-[#E87230] hover:bg-[#C55A1E] text-white px-6 md:px-8 py-2 md:py-3 rounded-full text-base md:text-lg transition-colors"
 //             >
 //               Book Your Table
 //             </button>
@@ -87,7 +87,7 @@
 //       <div className="bg-white py-8 w-full px-4 md:px-8">
 //         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 w-full">
 //           <div className="flex items-center space-x-3 md:space-x-4">
-//             <Clock className="h-6 w-6 text-hafaloha-pink" />
+//             <Clock className="h-6 w-6 text-[#E87230]" />
 //             <div>
 //               <h3 className="font-semibold text-base md:text-lg">Hours</h3>
 //               <p className="text-gray-600 text-sm md:text-base">Tues-Thu: 11AM-9PM</p>
@@ -96,7 +96,7 @@
 //             </div>
 //           </div>
 //           <div className="flex items-center space-x-3 md:space-x-4">
-//             <MapPin className="h-6 w-6 text-hafaloha-pink" />
+//             <MapPin className="h-6 w-6 text-[#E87230]" />
 //             <div>
 //               <h3 className="font-semibold text-base md:text-lg">Location</h3>
 //               <p className="text-gray-600 text-sm md:text-base">955 Pale San Vitores Rd</p>
@@ -104,11 +104,11 @@
 //             </div>
 //           </div>
 //           <div className="flex items-center space-x-3 md:space-x-4">
-//             <Phone className="h-6 w-6 text-hafaloha-pink" />
+//             <Phone className="h-6 w-6 text-[#E87230]" />
 //             <div>
 //               <h3 className="font-semibold text-base md:text-lg">Contact</h3>
 //               <p className="text-gray-600 text-sm md:text-base">(671) 123-4567</p>
-//               <p className="text-gray-600 text-sm md:text-base">info@hafaloha.com</p>
+//               <p className="text-gray-600 text-sm md:text-base">info@crabdaddy.com</p>
 //             </div>
 //           </div>
 //         </div>
@@ -167,7 +167,7 @@
 //         <div className="text-center max-w-3xl mx-auto">
 //           <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">Our Story</h2>
 //           <p className="text-gray-600 mb-4 text-sm md:text-base">
-//             Hafaloha represents the beautiful union of Chamorro and Hawaiian cultures.
+//             Crab Daddy brings the authentic taste of seafood boil to the beautiful island of Guam.
 //             Our journey began with shaved ice and acai bowls, growing into a full-service
 //             restaurant that celebrates the best of both islands.
 //           </p>
@@ -191,7 +191,7 @@
 //           <div>
 //             <h3 className="font-semibold text-lg mb-3">Contact</h3>
 //             <p className="text-gray-400">(671) 123-4567</p>
-//             <p className="text-gray-400">info@hafaloha.com</p>
+//             <p className="text-gray-400">info@crabdaddy.com</p>
 //           </div>
 //           <div>
 //             <h3 className="font-semibold text-lg mb-3">Location</h3>
@@ -200,11 +200,11 @@
 //           </div>
 //           <div>
 //             <h3 className="font-semibold text-lg mb-3">Follow Us</h3>
-//             <p className="text-gray-400">@hafaloha</p>
+//             <p className="text-gray-400">@crabdaddy</p>
 //           </div>
 //         </div>
 //         <div className="border-t border-gray-800 mt-8 pt-4 text-center text-gray-400 text-sm">
-//           <p>© {new Date().getFullYear()} Hafaloha. All rights reserved.</p>
+//           <p>© {new Date().getFullYear()} Crab Daddy. All rights reserved.</p>
 //         </div>
 //       </footer>
 

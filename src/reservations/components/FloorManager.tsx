@@ -602,7 +602,7 @@ export default function FloorManager({
   if (loading) {
     return (
       <div className="bg-white shadow rounded-md">
-        <div className="border-b border-gray-200 bg-hafaloha-gold/5 rounded-t-md px-4 py-3">
+        <div className="border-b border-gray-200 bg-[#F0C14B]/5 rounded-t-md px-4 py-3">
           <h2 className="text-xl font-bold text-gray-900">Floor Manager</h2>
         </div>
         <div className="p-4">Loading layout data...</div>
@@ -613,7 +613,7 @@ export default function FloorManager({
   if (!layout) {
     return (
       <div className="bg-white shadow rounded-md">
-        <div className="border-b border-gray-200 bg-hafaloha-gold/5 rounded-t-md px-4 py-3">
+        <div className="border-b border-gray-200 bg-[#F0C14B]/5 rounded-t-md px-4 py-3">
           <h2 className="text-xl font-bold text-gray-900">Floor Manager</h2>
         </div>
         <div className="p-4 flex items-center justify-center h-full pt-10">
@@ -626,7 +626,7 @@ export default function FloorManager({
             </p>
             <button
               onClick={() => onTabChange('layout')}
-              className="inline-flex items-center px-4 py-2 mt-5 bg-hafaloha-gold text-white rounded shadow hover:bg-hafaloha-coral"
+              className="inline-flex items-center px-4 py-2 mt-5 bg-[#F0C14B] text-white rounded shadow hover:bg-[#C55A1E]"
             >
               Create a Layout
             </button>
@@ -639,7 +639,7 @@ export default function FloorManager({
   return (
     <div className="bg-white shadow rounded-md">
       {/* Gold tinted header */}
-      <div className="border-b border-gray-200 bg-hafaloha-gold/5 rounded-t-md px-4 py-3">
+      <div className="border-b border-gray-200 bg-[#F0C14B]/5 rounded-t-md px-4 py-3">
         <h2 className="text-xl font-bold text-gray-900">Floor Manager</h2>
       </div>
 
@@ -698,7 +698,7 @@ export default function FloorManager({
             className={`
               px-3 py-1 text-sm rounded
               ${showGrid
-                ? 'bg-hafaloha-gold/10 text-hafaloha-gold border border-hafaloha-gold/20'
+                ? 'bg-[#F0C14B]/10 text-[#F0C14B] border border-[#F0C14B]/20'
                 : 'bg-gray-100 text-gray-600'
               }
             `}
@@ -754,7 +754,7 @@ export default function FloorManager({
               {seatWizard.occupantType === 'reservation' && (
                 <button
                   onClick={handleReserveSeats}
-                  className="px-4 py-2 bg-hafaloha-gold text-white rounded text-sm hover:bg-hafaloha-coral"
+                  className="px-4 py-2 bg-[#F0C14B] text-white rounded text-sm hover:bg-[#C55A1E]"
                 >
                   Reserve Seats
                 </button>
@@ -1076,7 +1076,7 @@ export default function FloorManager({
                       </p>
                       <button
                         onClick={finish}
-                        className="px-4 py-2 bg-hafaloha-gold text-white rounded hover:bg-hafaloha-coral"
+                        className="px-4 py-2 bg-[#F0C14B] text-white rounded hover:bg-[#C55A1E]"
                       >
                         Finish / Free Seat
                       </button>

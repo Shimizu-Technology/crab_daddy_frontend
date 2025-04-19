@@ -407,7 +407,7 @@ export function CheckoutPage() {
                     value={formData.name}
                     onChange={handleInputChange}
                     className="w-full px-4 py-2 border border-gray-300 rounded-md
-                      focus:ring-[#c1902f] focus:border-[#c1902f]"
+                      focus:ring-[#E87230] focus:border-[#E87230]"
                   />
                 </div>
 
@@ -428,7 +428,7 @@ export function CheckoutPage() {
                     value={formData.email}
                     onChange={handleInputChange}
                     className="w-full px-4 py-2 border border-gray-300 rounded-md
-                      focus:ring-[#c1902f] focus:border-[#c1902f]"
+                      focus:ring-[#E87230] focus:border-[#E87230]"
                   />
                 </div>
 
@@ -450,7 +450,7 @@ export function CheckoutPage() {
                     onChange={handleInputChange}
                     placeholder="+1671"
                     className="w-full px-4 py-2 border border-gray-300 rounded-md
-                      focus:ring-[#c1902f] focus:border-[#c1902f]"
+                      focus:ring-[#E87230] focus:border-[#E87230]"
                   />
                 </div>
               </div>
@@ -501,7 +501,7 @@ export function CheckoutPage() {
                 onChange={handleInputChange}
                 placeholder="Any special requests or notes for your order?"
                 className="w-full px-4 py-2 border border-gray-300 rounded-md
-                  focus:ring-[#c1902f] focus:border-[#c1902f]"
+                  focus:ring-[#E87230] focus:border-[#E87230]"
                 rows={3}
               />
             </div>
@@ -524,7 +524,7 @@ export function CheckoutPage() {
                     onChange={handleInputChange}
                     placeholder="Enter promo code"
                     className="flex-1 px-4 py-2 border border-gray-300 rounded-md
-                      focus:ring-[#c1902f] focus:border-[#c1902f]"
+                      focus:ring-[#E87230] focus:border-[#E87230]"
                   />
                   <button
                     type="button"
@@ -554,8 +554,8 @@ export function CheckoutPage() {
               <button
                 type="submit"
                 disabled={isSubmitting || (restaurant?.vip_only_checkout && !vipCodeValid)}
-                className={`w-full bg-[#c1902f] text-white py-3 px-4
-                  rounded-md hover:bg-[#d4a43f] transition-colors duration-200
+                className={`w-full bg-[#E87230] text-white py-3 px-4
+                  rounded-md hover:bg-[#C55A1E] transition-colors duration-200
                   ${(isSubmitting || (restaurant?.vip_only_checkout && !vipCodeValid)) ? 'opacity-70 cursor-not-allowed' : ''}`}
               >
                 {isSubmitting ? 'Processing...' : (restaurant?.vip_only_checkout && !vipCodeValid) ? 'Validate VIP Code First' : 'Place Order'}

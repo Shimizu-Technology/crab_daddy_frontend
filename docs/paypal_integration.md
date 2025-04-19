@@ -1,10 +1,10 @@
 # PayPal Integration Guide
 
-This document explains how to set up and use PayPal's Advanced/Expanded Checkout in the Hafaloha system.
+This document explains how to set up and use PayPal's Advanced/Expanded Checkout in the Crab Daddy system.
 
 ## Overview
 
-Hafaloha uses PayPal's Advanced (Expanded) Credit and Debit Card Payments for payment processing. This integration includes:
+Crab Daddy uses PayPal's Advanced (Expanded) Credit and Debit Card Payments for payment processing. This integration includes:
 
 1. Direct PayPal payments
 2. Credit/debit card payments processed through PayPal
@@ -34,7 +34,7 @@ To use PayPal's services, you need to obtain API credentials:
 
 ## Webhook Integration
 
-Hafaloha uses PayPal webhooks to receive real-time notifications about payment events. This ensures that your order statuses stay in sync with PayPal's payment processing.
+Crab Daddy uses PayPal webhooks to receive real-time notifications about payment events. This ensures that your order statuses stay in sync with PayPal's payment processing.
 
 ### Setting Up Webhooks
 
@@ -126,4 +126,4 @@ Use any future expiration date and any 3-digit CVV (4-digit for Amex).
 
 For additional help:
 - [PayPal Developer Documentation](https://developer.paypal.com/docs/checkout/advanced/)
-- Contact the Hafaloha development team
+- Contact the Crab Daddy development team

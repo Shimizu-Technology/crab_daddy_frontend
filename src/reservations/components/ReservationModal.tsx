@@ -301,7 +301,7 @@ export default function ReservationModal({
               {/* Status */}
               <div>
                 <strong>Status:</strong>{' '}
-                <span className="inline-block px-2 py-0.5 text-xs rounded-full bg-hafaloha-gold/10 text-hafaloha-gold">
+                <span className="inline-block px-2 py-0.5 text-xs rounded-full bg-crab-daddy-orange/10 text-crab-daddy-orange">
                   {reservation.status || 'N/A'}
                 </span>
               </div>
@@ -335,10 +335,10 @@ export default function ReservationModal({
                             onClick={() => handleAssignSeatsFromOption(idx)}
                             className="
                               ml-2 text-xs px-2 py-1
-                              bg-hafaloha-pink/10
-                              text-hafaloha-pink
-                              rounded
-                              hover:bg-hafaloha-pink/20
+                              bg-crab-daddy-blue/10
+                              text-crab-daddy-blue
+                              border border-crab-daddy-blue/20
+                              hover:bg-crab-daddy-blue/20
                             "
                           >
                             Assign
@@ -369,7 +369,7 @@ export default function ReservationModal({
               <div className="mt-6 flex justify-end space-x-2">
                 <button
                   onClick={() => setIsEditing(true)}
-                  className="px-4 py-2 bg-hafaloha-gold text-white rounded hover:bg-hafaloha-coral"
+                  className="px-4 py-2 bg-crab-daddy-orange text-white rounded hover:bg-crab-daddy-dark-orange"
                 >
                   Edit
                 </button>
@@ -404,7 +404,7 @@ export default function ReservationModal({
                   className="
                     w-full p-2 border border-gray-300
                     rounded
-                    focus:ring-2 focus:ring-hafaloha-gold focus:border-hafaloha-gold
+                    focus:ring-2 focus:ring-[#F0C14B] focus:border-[#F0C14B]
                   "
                 />
               </div>
@@ -422,7 +422,7 @@ export default function ReservationModal({
                   className="
                     w-full p-2 border border-gray-300
                     rounded
-                    focus:ring-2 focus:ring-hafaloha-gold focus:border-hafaloha-gold
+                    focus:ring-2 focus:ring-[#F0C14B] focus:border-[#F0C14B]
                   "
                 />
               </div>
@@ -440,7 +440,7 @@ export default function ReservationModal({
                   className="
                     w-full p-2 border border-gray-300
                     rounded
-                    focus:ring-2 focus:ring-hafaloha-gold focus:border-hafaloha-gold
+                    focus:ring-2 focus:ring-[#F0C14B] focus:border-[#F0C14B]
                   "
                 />
               </div>
@@ -456,7 +456,7 @@ export default function ReservationModal({
                   className="
                     w-full p-2 border border-gray-300
                     rounded
-                    focus:ring-2 focus:ring-hafaloha-gold focus:border-hafaloha-gold
+                    focus:ring-2 focus:ring-[#F0C14B] focus:border-[#F0C14B]
                   "
                 />
               </div>
@@ -472,7 +472,7 @@ export default function ReservationModal({
                   className="
                     w-full p-2 border border-gray-300
                     rounded
-                    focus:ring-2 focus:ring-hafaloha-gold focus:border-hafaloha-gold
+                    focus:ring-2 focus:ring-[#F0C14B] focus:border-[#F0C14B]
                   "
                 />
               </div>
@@ -487,7 +487,7 @@ export default function ReservationModal({
                   className="
                     w-full p-2 border border-gray-300
                     rounded
-                    focus:ring-2 focus:ring-hafaloha-gold focus:border-hafaloha-gold
+                    focus:ring-2 focus:ring-[#F0C14B] focus:border-[#F0C14B]
                   "
                 >
                   <option value="booked">booked</option>
@@ -530,10 +530,10 @@ export default function ReservationModal({
                   onClick={handleSave}
                   className="
                     px-4 py-2
-                    bg-hafaloha-gold
+                    bg-[#F0C14B]
                     text-white
                     rounded
-                    hover:bg-hafaloha-coral
+                    hover:bg-[#C55A1E]
                   "
                 >
                   Save

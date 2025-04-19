@@ -1,6 +1,6 @@
 # PostHog Analytics Integration (Frontend)
 
-This document outlines how PostHog analytics is integrated into the Hafaloha frontend application for tracking user behavior, feature usage, and system events.
+This document outlines how PostHog analytics is integrated into the Crab Daddy frontend application for tracking user behavior, feature usage, and system events.
 
 ## Overview
 

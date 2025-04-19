@@ -90,13 +90,13 @@ export function Footer() {
             <address className="not-italic text-gray-300 space-y-2">
               <p>{restaurant?.address || "955 Pale San Vitores Rd, Tamuning, Guam 96913"}</p>
               <p>Phone: {formatPhoneNumber(restaurant?.phone_number) || "+1 (671) 989-3444"}</p>
-              <p>Email: {restaurant?.contact_email || "sales@hafaloha.com"}</p>
+              <p>Email: {restaurant?.contact_email || "info@crabdaddy.com"}</p>
             </address>
           </div>
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {currentYear} Hafaloha. All rights reserved.</p>
+          <p>&copy; {currentYear} Crab Daddy. All rights reserved.</p>
         </div>
       </div>
     </footer>

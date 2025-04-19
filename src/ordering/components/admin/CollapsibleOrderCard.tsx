@@ -114,7 +114,7 @@ function findBestMatchingItem(
       return keyParts.some(part => 
         part.includes(itemName) || 
         itemName.includes(part) ||
-        // Handle common variations like "Burger" matching "Hafaloha Burger"
+        // Handle common variations like "Seafood" matching "Crab Daddy Seafood"
         (itemName.includes("burger") && part.includes("burger")) ||
         (itemName.includes("bowl") && part.includes("bowl")) ||
         // Handle "Cali Poke" or other poke variations
@@ -572,7 +572,7 @@ export function CollapsibleOrderCard({
               // Try different matching strategies
               return keyLower.includes(itemNameLower) || 
                      itemNameLower.includes(keyLower) ||
-                     // Handle common variations like "Burger" matching "Hafaloha Burger"
+                     // Handle common variations like "Seafood" matching "Crab Daddy Seafood"
                      (itemNameLower.includes("burger") && keyLower.includes("burger")) ||
                      (itemNameLower.includes("bowl") && keyLower.includes("bowl")) ||
                      // Handle "Cali Poke" or other poke variations
@@ -615,7 +615,7 @@ export function CollapsibleOrderCard({
     ? 'animate-pulse-light border-yellow-300 shadow-yellow-100'
     : '';
   const highlightClasses = isHighlighted
-    ? 'ring-2 ring-[#c1902f] ring-opacity-70 shadow-md'
+    ? 'ring-2 ring-[#E87230] ring-opacity-70 shadow-md'
     : '';
 
   // Calculate the actual total based on the current items in the order
@@ -664,7 +664,7 @@ export function CollapsibleOrderCard({
                 type="checkbox"
                 checked={isSelected}
                 onChange={(e) => onSelectChange(e.target.checked)}
-                className="h-5 w-5 text-[#c1902f] focus:ring-[#c1902f] border-gray-300 rounded"
+                className="h-5 w-5 text-[#E87230] focus:ring-[#E87230] border-gray-300 rounded"
                 aria-label="Select order"
               />
             </div>
@@ -919,7 +919,7 @@ export function CollapsibleOrderCard({
             <div className="flex justify-end">
               <button
                 onClick={onToggleExpand}
-                className="text-[#c1902f] hover:text-[#a07929] text-sm font-medium flex items-center mt-1 py-1"
+                className="text-[#E87230] hover:text-[#C55A1E] text-sm font-medium flex items-center mt-1 py-1"
                 aria-expanded={isExpanded}
                 aria-controls={`order-details-${order.id}`}
               >

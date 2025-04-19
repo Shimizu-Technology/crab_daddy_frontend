@@ -65,8 +65,8 @@ const SortableCategoryItem = ({
     position: 'relative' as const,
     backgroundColor: isAnimating 
       ? moveDirection === 'up' 
-        ? 'rgba(193, 144, 47, 0.05)' 
-        : 'rgba(193, 144, 47, 0.05)' 
+        ? 'rgba(232, 114, 48, 0.05)' 
+        : 'rgba(232, 114, 48, 0.05)' 
       : 'transparent',
     transform: isAnimating 
       ? `translateY(${moveDirection === 'up' ? '-3px' : '3px'})` 
