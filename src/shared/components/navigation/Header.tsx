@@ -101,6 +101,10 @@ export function Header() {
   // Profile/Admin dropdown (desktop)
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  
+  // Locations dropdown
+  const [isLocationDropdownOpen, setIsLocationDropdownOpen] = useState(false);
+  const locationDropdownRef = useRef<HTMLDivElement>(null);
 
   // Close mobile menu when location changes
   useEffect(() => {
@@ -116,6 +120,15 @@ export function Header() {
         !dropdownRef.current.contains(event.target as Node)
       ) {
         setIsDropdownOpen(false);
+      }
+      
+      // Close locations dropdown if clicked outside
+      if (
+        locationDropdownRef.current &&
+        !locationDropdownRef.current.contains(event.target as Node) &&
+        !(event.target as Element).closest('[data-location-toggle]')
+      ) {
+        setIsLocationDropdownOpen(false);
       }
       
       // Close mobile menu if clicked outside (but not if clicking the toggle button)
@@ -225,9 +238,42 @@ export function Header() {
                 </div>
               </div>
               
-              <div className="hidden lg:flex xl:flex items-center text-gray-600 group">
-                <MapPin className="h-4 w-4 mr-1.5 text-[#C55A1E] group-hover:scale-110 transition-transform duration-200" />
-                <span className="text-sm truncate max-w-[100px] xl:max-w-none">{restaurant?.address ? restaurant.address.split(',')[0] : 'Tamuning'}</span>
+              {/* Locations dropdown */}
+              <div className="relative">
+                {/* Using state instead of CSS hover for better control */}
+                <button 
+                  data-location-toggle="true"
+                  onClick={() => setIsLocationDropdownOpen(!isLocationDropdownOpen)}
+                  className="hidden lg:flex xl:flex items-center text-gray-600 cursor-pointer focus:outline-none"
+                  aria-expanded={isLocationDropdownOpen}
+                  aria-haspopup="true"
+                >
+                  <MapPin className="h-4 w-4 mr-1.5 text-[#C55A1E] hover:scale-110 transition-transform duration-200" />
+                  <span className="text-sm truncate max-w-[100px] xl:max-w-none">Our Locations</span>
+                  <ChevronDown className={`h-3 w-3 ml-1 text-gray-500 hover:text-[#C55A1E] transition-colors duration-200 ${isLocationDropdownOpen ? 'rotate-180' : ''}`} />
+                </button>
+                
+                {/* Dropdown content */}
+                {isLocationDropdownOpen && (
+                  <div 
+                    className="absolute left-0 mt-2 w-64 bg-white rounded-md shadow-lg py-1 z-50 border border-gray-100 animate-fadeIn"
+                    ref={locationDropdownRef}
+                  >
+                    <div className="px-4 py-3 text-sm text-gray-700 flex items-center justify-between">
+                      <div>
+                        <span className="font-medium block mb-1">Agaña Location</span>
+                        <span className="text-xs text-gray-500 block">117 E Marine Drive, Hagåtña</span>
+                      </div>
+                    </div>
+                    <div className="px-4 py-3 text-sm text-gray-700 flex items-center justify-between">
+                      <div>
+                        <span className="font-medium block mb-1">Tumon Location</span>
+                        <span className="text-xs text-gray-500 block">881 Pale San Vitores Road</span>
+                      </div>
+                      <span className="bg-[#0870B0] text-white text-xs px-1.5 py-0.5 rounded-full ml-2 flex-shrink-0">NEW</span>
+                    </div>
+                  </div>
+                )}
               </div>
               
               {restaurant?.phone_number ? (
@@ -397,10 +443,11 @@ export function Header() {
         <div className="p-4 border-b border-gray-100 flex justify-between items-center">
           <Link 
             to="/" 
-            className="text-xl font-bold text-[#C55A1E]"
+            className="flex items-center text-xl font-bold text-[#C55A1E]"
             onClick={() => setIsMobileMenuOpen(false)}
           >
-            håfaloha!
+            <img src="/crab-daddy-logo.png" alt="Crab Daddy" className="h-8 mr-2" />
+            <span className="font-display">Crab Daddy</span>
           </Link>
           <button
             className="p-2 rounded-md text-gray-700 hover:text-[#C55A1E] hover:bg-gray-100 
@@ -451,36 +498,52 @@ export function Header() {
           
           {/* Restaurant Info */}
           <div className="space-y-2 pt-2 border-t border-gray-100">
-            <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Restaurant Info</h3>
+            <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider">Our Locations</h3>
+            
+            {/* Hours */}
             <div className="px-3 py-2 text-base text-gray-700 flex items-center">
               <Clock className="inline-block h-4 w-4 mr-3 text-[#C55A1E]" />
               11AM-9PM
             </div>
-            <div className="px-3 py-2 text-base text-gray-700 flex items-center">
-              <MapPin className="inline-block h-4 w-4 mr-3 text-[#C55A1E]" />
-              {restaurant?.address ? restaurant.address.split(',')[0] : 'Tamuning'}
+            
+            {/* Agaña Location */}
+            <div className="px-3 py-2 text-base text-gray-700">
+              <div className="flex items-center mb-1">
+                <MapPin className="inline-block h-4 w-4 mr-3 text-[#C55A1E]" />
+                <span className="font-medium">Agaña Location</span>
+              </div>
+              <div className="ml-7 text-sm text-gray-500">
+                117 E Marine Drive, Hagåtña, 96910
+              </div>
+              <a
+                href="tel:+16714772722"
+                className="flex mt-1 ml-7 text-sm text-gray-700 hover:text-[#C55A1E] items-center"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <Phone className="inline-block h-3 w-3 mr-1 text-[#C55A1E]" />
+                (671) 477-2722
+              </a>
             </div>
-            {restaurant?.phone_number ? (
+            
+            {/* Tumon Location */}
+            <div className="px-3 py-2 text-base text-gray-700">
+              <div className="flex items-center mb-1">
+                <MapPin className="inline-block h-4 w-4 mr-3 text-[#C55A1E]" />
+                <span className="font-medium">Tumon Location</span>
+                <span className="ml-2 bg-[#0870B0] text-white text-xs px-1.5 py-0.5 rounded-full">NEW</span>
+              </div>
+              <div className="ml-7 text-sm text-gray-500">
+                881 Pale San Vitores Road, Tumon Bay, 96913
+              </div>
               <a
-                href={`tel:${restaurant.phone_number}`}
-                className="flex px-3 py-2 text-base text-gray-700 hover:text-[#C55A1E]
-                         hover:bg-gray-50 transition-colors duration-150 items-center"
-                onClick={() => setIsMobileMenuOpen(false)}
+                href="tel:+16716462722"
+                className="flex mt-1 ml-7 text-sm text-gray-700 hover:text-[#C55A1E] items-center"
+                onClick={(e) => e.stopPropagation()}
               >
-                <Phone className="inline-block h-4 w-4 mr-3 text-[#C55A1E]" />
-                {formatPhoneNumber(restaurant.phone_number)}
+                <Phone className="inline-block h-3 w-3 mr-1 text-[#C55A1E]" />
+                (671) 646-2722
               </a>
-            ) : (
-              <a
-                href="tel:+16719893444"
-                className="flex px-3 py-2 text-base text-gray-700 hover:text-[#C55A1E]
-                         hover:bg-gray-50 transition-colors duration-150 items-center"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                <Phone className="inline-block h-4 w-4 mr-3 text-[#C55A1E]" />
-                (671) 989-3444
-              </a>
-            )}
+            </div>
           </div>
 
           {/* User Account */}

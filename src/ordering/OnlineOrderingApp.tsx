@@ -15,6 +15,7 @@ import { LoginForm, SignUpForm, ForgotPasswordForm, ResetPasswordForm, VerifyPho
 import { OrderHistory } from './components/profile/OrderHistory';
 import { ProfilePage } from '../shared/components/profile';
 import FeaturedSection from './components/FeaturedSection';
+import LocationsSection from './components/LocationsSection';
 
 import { useMenuStore } from './store/menuStore';
 import { useCategoryStore } from './store/categoryStore';
@@ -347,6 +348,7 @@ export default function OnlineOrderingApp() {
                   </div>
                 )}
               </div>
+              <LocationsSection />
             </>
           }
         />

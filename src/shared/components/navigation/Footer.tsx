@@ -35,11 +35,34 @@ export function Footer() {
           {/* Contact column */}
           <div>
             <h3 className="text-xl font-serif font-semibold mb-4 text-[#0870B0]">Contact Us</h3>
-            <address className="not-italic text-gray-300 text-sm">
-              <p>{restaurant?.address || "881 Pale San Vitores Road, Tumon Bay, 96913"}</p>
-              <p className="mt-2">Phone: <a href="tel:+16716462722" className="text-[#E87230] hover:text-[#C55A1E] transition-colors duration-200">{restaurant?.phone_number ? restaurant.phone_number : "(671) 646-2722"}</a></p>
-              <p className="mt-2">Email: <a href="mailto:info@crabdaddy.com" className="text-[#E87230] hover:text-[#C55A1E] transition-colors duration-200">{restaurant?.contact_email || "info@crabdaddy.com"}</a></p>
-            </address>
+            <div className="grid grid-cols-1 gap-4">
+              {/* Tumon Location */}
+              <div className="mb-2">
+                <div className="flex items-center">
+                  <span className="text-[#E87230] font-medium">Tumon Location</span>
+                  <span className="ml-2 bg-[#0870B0] text-white text-xs px-1.5 py-0.5 rounded-full">NEW</span>
+                </div>
+                <address className="not-italic text-gray-300 text-sm mt-1">
+                  <p>881 Pale San Vitores Road</p>
+                  <p>Tumon Bay, 96913</p>
+                  <p className="mt-1">Phone: <a href="tel:+16716462722" className="text-[#E87230] hover:text-[#C55A1E] transition-colors duration-200">(671) 646-2722</a></p>
+                </address>
+              </div>
+              
+              {/* Agaña Location */}
+              <div>
+                <div className="flex items-center">
+                  <span className="text-[#E87230] font-medium">Agaña Location</span>
+                </div>
+                <address className="not-italic text-gray-300 text-sm mt-1">
+                  <p>117 E Marine Drive</p>
+                  <p>Hagåtña, 96910</p>
+                  <p className="mt-1">Phone: <a href="tel:+16714772722" className="text-[#E87230] hover:text-[#C55A1E] transition-colors duration-200">(671) 477-2722</a></p>
+                </address>
+              </div>
+              
+              <p className="mt-2">Email: <a href="mailto:info@crabdaddy.com" className="text-[#E87230] hover:text-[#C55A1E] transition-colors duration-200">info@crabdaddy.com</a></p>
+            </div>
           </div>
         </div>
 
