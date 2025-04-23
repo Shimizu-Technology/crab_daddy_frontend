@@ -1,5 +1,5 @@
 // src/ordering/components/Hero.tsx
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ReservationModal } from './reservation/ReservationModal';
 import { ChevronDown } from 'lucide-react';
@@ -10,6 +10,8 @@ import fallbackHero from '/crab-daddy-hero.avif';
 
 export function Hero() {
   const [showReservationModal, setShowReservationModal] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageUrl, setImageUrl] = useState('');
 
   // Get the restaurant from the store
   const restaurant = useRestaurantStore((state) => state.restaurant);
@@ -20,6 +22,35 @@ export function Hero() {
   
   // Priority: 1. Restaurant's hero image, 2. Site settings hero image, 3. Fallback image
   const backgroundImage = restaurantHeroImageUrl || siteHeroImageUrl || fallbackHero;
+  
+  // Preload the image
+  useEffect(() => {
+    const img = new Image();
+    img.src = backgroundImage;
+    img.onload = () => {
+      setImageUrl(backgroundImage);
+      setImageLoaded(true);
+    };
+    img.onerror = () => {
+      // If the main image fails, try to load the fallback
+      if (backgroundImage !== fallbackHero) {
+        const fallbackImg = new Image();
+        fallbackImg.src = fallbackHero;
+        fallbackImg.onload = () => {
+          setImageUrl(fallbackHero);
+          setImageLoaded(true);
+        };
+      } else {
+        // If even the fallback fails, just show something
+        setImageLoaded(true);
+      }
+    };
+    
+    return () => {
+      img.onload = null;
+      img.onerror = null;
+    };
+  }, [backgroundImage]);
   
   // Function to scroll to the next section smoothly
   const scrollToNextSection = useCallback(() => {
@@ -37,13 +68,19 @@ export function Hero() {
     <div className="relative w-full">
       {/* Hero section with background image - mobile-first approach */}
       <div 
-        className="hero-section w-full h-[100vh] max-h-[100vh] bg-cover bg-center bg-no-repeat flex items-center justify-center relative" 
+        className={`hero-section w-full h-[100vh] max-h-[100vh] bg-cover bg-center bg-no-repeat flex items-center justify-center relative transition-opacity duration-500 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`} 
         style={{
-          backgroundImage: `url(${backgroundImage})`,
+          backgroundImage: imageLoaded ? `url(${imageUrl})` : 'none',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
+        {/* Loading placeholder - only shown while image is loading */}
+        {!imageLoaded && (
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0870B0]/20 to-[#E87230]/20 flex items-center justify-center">
+            <div className="w-12 h-12 border-4 border-[#0870B0] border-t-[#E87230] rounded-full animate-spin"></div>
+          </div>
+        )}
         {/* Darker overlay for better text visibility */}
         <div className="absolute inset-0 bg-black opacity-40" />
         {/* Additional gradient overlay for text area */}
