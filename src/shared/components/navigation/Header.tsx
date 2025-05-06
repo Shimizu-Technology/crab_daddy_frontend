@@ -327,6 +327,7 @@ export function Header() {
                         </div>
                         
                         {/* Reservations Dashboard - only visible to admin and super_admin */}
+                        {/* Temporarily commented out
                         {isAdminOrAbove && (
                           <Link
                             to="/reservations/dashboard"
@@ -337,6 +338,7 @@ export function Header() {
                             Manage Reservations
                           </Link>
                         )}
+                        */}
                         
                         {/* Admin Dashboard - visible to all admin roles */}
                         <Link
