@@ -4,7 +4,8 @@ import { useState, useRef, useCallback } from 'react';
 import { useRestaurantStore } from '../../../../shared/store/restaurantStore';
 import { validateRestaurantContext } from '../../../../shared/utils/tenantUtils';
 import ReservationsListTab from './tabs/ReservationsListTab';
-import WaitlistTab from './tabs/WaitlistTab';
+// Temporarily commented out
+// import WaitlistTab from './tabs/WaitlistTab';
 import BlockedPeriodsManager from './BlockedPeriodsManager';
 import { LocationCapacitiesManager } from './LocationCapacitiesManager';
 import { LayoutEditorManager } from './LayoutEditorManager';
@@ -77,7 +78,8 @@ export function ReservationsManager() {
   // Tabs for reservation management
   const tabs = [
     { id: 'list', label: 'Reservations' },
-    { id: 'waitlist', label: 'Waitlist' },
+    // Waitlist tab temporarily commented out
+    // { id: 'waitlist', label: 'Waitlist' },
     { id: 'floor-plan', label: 'Floor Plan' },
     { id: 'layout', label: 'Layout Editor' },
     { id: 'blocked', label: 'Blocked Periods' },
@@ -109,7 +111,8 @@ export function ReservationsManager() {
       <div className="w-full">
         {activeTab === 'list' && <ReservationsListTab />}
 
-        {activeTab === 'waitlist' && <WaitlistTab />}
+        {/* Waitlist tab temporarily commented out */}
+        {/* {activeTab === 'waitlist' && <WaitlistTab />} */}
 
         {activeTab === 'floor-plan' && <SeatingManager />}
 
