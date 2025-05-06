@@ -1,5 +1,5 @@
 // src/reservations/components/StaffDashboard.tsx
-// No additional imports needed
+import React from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
 
 /**
@@ -8,7 +8,6 @@ import { Outlet, Link, useLocation } from 'react-router-dom';
  */
 export default function StaffDashboard() {
   const location = useLocation();
-  // Colors are defined in Tailwind config
 
   return (
     <div className="bg-white min-h-screen">
@@ -16,7 +15,7 @@ export default function StaffDashboard() {
       <div className="max-w-7xl mx-auto px-4 mt-6">
         <div
           className="
-            bg-crab-daddy-orange/5
+            bg-[#0078d4]/5
             rounded-md
             shadow
             p-3
@@ -24,13 +23,14 @@ export default function StaffDashboard() {
             items-center
             space-x-2
             overflow-x-auto
-            border-crab-daddy-orange
           "
         >
           <NavTab to="reservations" label="Reservations" currentPath={location.pathname} />
           <NavTab to="waitlist"     label="Waitlist"     currentPath={location.pathname} />
           <NavTab to="seating"      label="Seating"      currentPath={location.pathname} />
           <NavTab to="layout"       label="Layout"       currentPath={location.pathname} />
+          <NavTab to="blocked-periods" label="Blocked Periods" currentPath={location.pathname} />
+          <NavTab to="location-capacities" label="Capacities" currentPath={location.pathname} />
           <NavTab to="settings"     label="Settings"     currentPath={location.pathname} />
         </div>
       </div>
@@ -45,7 +45,7 @@ export default function StaffDashboard() {
 
 /**
  * NavTab
- * Highlights the active tab in Crab Daddy brand style.
+ * Highlights the active tab.
  */
 function NavTab({
   to,
@@ -74,8 +74,8 @@ function NavTab({
         transition-colors
         ${
           isActive
-            ? 'bg-crab-daddy-orange text-white shadow'
-            : 'bg-crab-daddy-orange/10 text-crab-daddy-orange hover:bg-crab-daddy-orange/20'
+            ? 'bg-[#0078d4] text-white shadow'
+            : 'bg-[#0078d4]/10 text-[#0078d4] hover:bg-[#50a3d9]/20'
         }
       `}
     >
