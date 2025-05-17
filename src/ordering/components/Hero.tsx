@@ -104,17 +104,19 @@ export function Hero() {
 
             {/* Button container with proper spacing and mobile optimization */}
             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mt-6 sm:mt-8">
-              {/* Blue rounded button for booking a table - primary action */}
-              <button
-                onClick={() => setShowReservationModal(true)}
-                className="inline-flex items-center justify-center px-6 sm:px-8 py-2.5 sm:py-3
-                          text-sm sm:text-base font-medium rounded-full
-                          text-white bg-[#0870B0] shadow-md
-                          hover:bg-[#4A9ED6] hover:shadow-lg
-                          transition-all duration-200 ease-in-out"
-              >
-                Book Your Table
-              </button>
+              {/* Only show Book Your Table button if enabled in settings */}
+              {restaurant?.admin_settings?.reservations?.enable_reservations_button !== false && (
+                <button
+                  onClick={() => setShowReservationModal(true)}
+                  className="inline-flex items-center justify-center px-6 sm:px-8 py-2.5 sm:py-3
+                            text-sm sm:text-base font-medium rounded-full
+                            text-white bg-[#0870B0] shadow-md
+                            hover:bg-[#4A9ED6] hover:shadow-lg
+                            transition-all duration-200 ease-in-out"
+                >
+                  Book Your Table
+                </button>
+              )}
 
               {/* Orange Order Now button - high intent action */}
               <Link

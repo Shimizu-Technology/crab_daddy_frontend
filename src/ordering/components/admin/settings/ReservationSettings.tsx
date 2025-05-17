@@ -583,6 +583,28 @@ export function ReservationSettings({ restaurant, onUpdate }: ReservationSetting
       {/* Section Content */}
       {isExpanded && (
         <div className="px-4 py-5 sm:p-6 space-y-6">
+          {/* Enable Reservations Button Toggle */}
+          <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg border border-gray-200 mb-6">
+            <div>
+              <h4 className="text-sm font-medium text-gray-900">Enable "Book Your Table" Button</h4>
+              <p className="text-xs text-gray-500 mt-1">
+                When enabled, customers will see a "Book Your Table" button on the homepage.
+                When disabled, the button will be hidden.
+              </p>
+            </div>
+            <div className="flex items-center">
+              <label className="inline-flex relative items-center cursor-pointer">
+                <input 
+                  type="checkbox" 
+                  className="sr-only peer" 
+                  checked={restaurant.admin_settings?.reservations?.enable_reservations_button !== false} 
+                  onChange={(e) => updateReservationSetting('enable_reservations_button', e.target.checked)}
+                />
+                <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-[#E87230]/20 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#E87230]"></div>
+              </label>
+            </div>
+          </div>
+
           <div className="text-sm text-gray-500 mb-4">
             Configure how your reservation system handles time slots, overlaps, and seating capacity.
           </div>
